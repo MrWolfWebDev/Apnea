@@ -1,10 +1,9 @@
-Apnea
-=====
+#Apnea
 
 Sito per Associazione di Apnea, aggiunta di contenuto dinamico (News / Galleria)
 
 
-TODO:
+##TODO:
 
 1. Realizzazione pagina News.php con aggiornamento dinamico da DataBase
 
