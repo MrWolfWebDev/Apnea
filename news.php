@@ -172,7 +172,7 @@
 
                     <div class="portfolio-thumbs clearfix" >
 
-                        <!-- area testo ----------------------------------------------------------- -->
+                        <!-- area testo -->
 
 
                         <div style="width:53%; height:100%; float:left; margin-left: 14px; margin-right:15px; margin-bottom:15px; color:#FFF; text-align:justify; font-size:11px; line-height:15px;">
