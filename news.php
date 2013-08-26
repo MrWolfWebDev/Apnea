@@ -194,6 +194,22 @@
                                 <div style="position: relative; float: left; width:15%;" >Foto</div>
                             </div>
 
+                            <div class="clearfix">
+                                <div style="position: relative; float: left; width: 10%;">Data</div>
+                                <div style="position: relative; float: left; width: 75%;">
+                                    <p style="font-family:Arial, Helvetica, sans-serif; color:#FFF; font-size:18px; text-transform: uppercase; ">Titolo<p>
+
+                                    <p style="font-family:Arial, Helvetica, sans-serif; color:#FFF; font-size:12px;">Est venture veni tem int, nulpa delestis modiatur simus saepuda quia qui
+                                        volo doluptat aut ratur molupic imagni totam, vent la dit, is et quo cus del
+                                        intus pa voluptio cum ea venest, is sa nonsedit que maiorum ressus aperis
+                                        cone sim es nimil ium harum et pedipsae ea doluptus.
+                                        Ebiti dipicaestis eaquibusam, ommodi sumUt et doluptatur adissim res
+                                        natum autatin ulluptatqui dolo et apidel iliquam velescit ut et im harum
+                                        acid quibus idunt ipitis dolo que essimai orempor empersp elique denisquodit,
+                                        aliqui ulpa de et aute poritat liasitae net mosam ipis nam et
+                                        harum volupiendae verum re volorioreste et aut assitemperi quam.</p></div>
+                                <div style="position: relative; float: left; width:15%;" >Foto</div>
+                            </div>
 
                             <span style="color:#39F; font-weight: bold;">QUANDO:</span><br>
                             Vedi calendario nella pagina delle NEWS<br><br>
