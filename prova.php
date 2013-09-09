@@ -19,5 +19,12 @@ $database->bind(':gender', 'male');
 $database->execute();
 
 echo $database->lastInsertId();
-echo $database->resultset();
+echo '<br>';
+
+$database->query('SELECT * FROM mytable');
+$result = $database->resultset();
+foreach ($result as $row) {
+    $id = $row['ID'];
+    echo $id . '<br>';
+}
 ?>
