@@ -1,15 +1,17 @@
 <?php
 
+include 'news.class.php';
+
 // Database class (Using PDO)
 class Database {
 
-    private $host = DB_HOST;
-    private $user = DB_USER;
-    private $pass = DB_PASS;
-    private $dbname = DB_NAME;
-    private $dbh;
-    private $error;
-    private $stmt;
+    protected $host = DB_HOST;
+    protected $user = DB_USER;
+    protected $pass = DB_PASS;
+    protected $dbname = DB_NAME;
+    protected $dbh;
+    protected $error;
+    protected $stmt;
 
     public function __construct() {
         // Set DSN
@@ -95,3 +97,15 @@ class Database {
     }
 
 }
+
+// DBNews class (Extends Database class) (Using PDO)
+
+class DBNews extends Database {
+
+    public function fetchNews() {
+        $this->execute();
+        return $this->stmt->fetchAll(PDO::FETCH_CLASS, "News");
+    }
+
+}
+
