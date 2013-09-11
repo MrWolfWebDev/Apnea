@@ -46,7 +46,7 @@ $result2 = $newsDB->fetchSome(2);
 
 foreach ($result2 as $news) {
 
-    echo implode(PHP_EOL, $news->toArray());
+    echo $news->toString();
 
     echo '<br/>';
 }

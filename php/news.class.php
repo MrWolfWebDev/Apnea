@@ -26,6 +26,13 @@ class News {
         return $array;
     }
 
+    public function toString($glue = ",") {
+        $array = $this->toArray();
+        $string = implode($glue, $array);
+
+        return $string;
+    }
+
 }
 
 ?>
