@@ -63,41 +63,41 @@
 
         <script type="text/javascript">
             // test auto-ready logic - call corner before DOM is ready
-            $( '#readyTest' ).corner();
+            $('#readyTest').corner();
 
-            $( function() {
-                $( '#dynCorner' ).click( function() {
-                    $( '#dynamic' ).corner();
-                } );
-                $( '#dynUncorner' ).click( function() {
-                    $( '#dynamic' ).uncorner();
-                } );
+            $(function() {
+                $('#dynCorner').click(function() {
+                    $('#dynamic').corner();
+                });
+                $('#dynUncorner').click(function() {
+                    $('#dynamic').uncorner();
+                });
 
-                $( 'div.inner' ).wrap( '<div class="outer"></div>' );
-                $( 'p' ).wrap( "<code></code>" );
+                $('div.inner').wrap('<div class="outer"></div>');
+                $('p').wrap("<code></code>");
 
-                $( 'div.demo, div.inner' ).each( function() {
-                    var t = $( 'p', this ).text();
-                    eval( t );
-                } );
+                $('div.demo, div.inner').each(function() {
+                    var t = $('p', this).text();
+                    eval(t);
+                });
 
                 // fixed/fluid tests
-                $( "div.box, div.plain" ).corner();
-                $( "#abs" ).corner( "cc:#08e" );
+                $("div.box, div.plain").corner();
+                $("#abs").corner("cc:#08e");
 
-                $( '.myCorner' ).corner();
-            } );
+                $('.myCorner').corner();
+            });
         </script>
 
         <script type="text/javascript">
 
             /* angoli box sopra */
-            $( '.demo' ).corner( "top 10px" );
+            $('.demo').corner("top 10px");
 
             /* angoli box chiusura */
-            $( '.demo2' ).corner( "bottom 10px" );
+            $('.demo2').corner("bottom 10px");
 
-            $( '.portfolio-thumbs figure' ).corner( "top 10px" );
+            $('.portfolio-thumbs figure').corner("top 10px");
 
         </script>
 
@@ -109,15 +109,15 @@
         <!-- js per bottone FaceBook -->
 
         <div id="fb-root"></div>
-        <script>( function( d, s, id ) {
-                var js, fjs = d.getElementsByTagName( s )[0];
-                if ( d.getElementById( id ) )
+        <script>(function(d, s, id) {
+                var js, fjs = d.getElementsByTagName(s)[0];
+                if (d.getElementById(id))
                     return;
-                js = d.createElement( s );
+                js = d.createElement(s);
                 js.id = id;
                 js.src = "//connect.facebook.net/it_IT/all.js#xfbml=1";
-                fjs.parentNode.insertBefore( js, fjs );
-            }( document, 'script', 'facebook-jssdk' ) );</script>
+                fjs.parentNode.insertBefore(js, fjs);
+            }(document, 'script', 'facebook-jssdk'));</script>
         <!-- END js per bottone FaceBook -->
 
 
@@ -176,64 +176,26 @@
 
 
                         <div style="width:53%; height:100%; float:left; margin-left: 14px; margin-right:15px; margin-bottom:15px; color:#FFF; text-align:justify; font-size:11px; line-height:15px;">
+                            <?php
+                            require_once 'lib/Twig/Autoloader.php';
+                            Twig_Autoloader::register();
 
-                            <div class="clearfix">
-                                <div style="position: relative; float: left; width: 10%;">Data</div>
-                                <div style="position: relative; float: left; width: 75%;">
-                                    <p style="font-family:Arial, Helvetica, sans-serif; color:#FFF; font-size:18px; text-transform: uppercase; ">Titolo<p>
+                            $loader = new Twig_Loader_Filesystem('templates');
+                            $twig = new Twig_Environment($loader, array(
+                                //'debug' => TRUE,
+                                'cache' => 'compilation_cache',
+                                'auto_reload' => TRUE
+                            ));
 
-                                    <p style="font-family:Arial, Helvetica, sans-serif; color:#FFF; font-size:12px;">Est venture veni tem int, nulpa delestis modiatur simus saepuda quia qui
-                                        volo doluptat aut ratur molupic imagni totam, vent la dit, is et quo cus del
-                                        intus pa voluptio cum ea venest, is sa nonsedit que maiorum ressus aperis
-                                        cone sim es nimil ium harum et pedipsae ea doluptus.
-                                        Ebiti dipicaestis eaquibusam, ommodi sumUt et doluptatur adissim res
-                                        natum autatin ulluptatqui dolo et apidel iliquam velescit ut et im harum
-                                        acid quibus idunt ipitis dolo que essimai orempor empersp elique denisquodit,
-                                        aliqui ulpa de et aute poritat liasitae net mosam ipis nam et
-                                        harum volupiendae verum re volorioreste et aut assitemperi quam.</p></div>
-                                <div style="position: relative; float: left; width:15%;" >Foto</div>
-                            </div>
+                            $template = $twig->loadTemplate('listview.html');
 
-                            <div class="clearfix">
-                                <div style="position: relative; float: left; width: 10%;">Data</div>
-                                <div style="position: relative; float: left; width: 75%;">
-                                    <p style="font-family:Arial, Helvetica, sans-serif; color:#FFF; font-size:18px; text-transform: uppercase; ">Titolo<p>
+                            $docdatajson = '[{"data":"11/09/2013","titolo":"Peni","testo":"grandi e neri","foto":"peni.jpg"}]';
+                            $docdata = json_decode($docdatajson);
 
-                                    <p style="font-family:Arial, Helvetica, sans-serif; color:#FFF; font-size:12px;">Est venture veni tem int, nulpa delestis modiatur simus saepuda quia qui
-                                        volo doluptat aut ratur molupic imagni totam, vent la dit, is et quo cus del
-                                        intus pa voluptio cum ea venest, is sa nonsedit que maiorum ressus aperis
-                                        cone sim es nimil ium harum et pedipsae ea doluptus.
-                                        Ebiti dipicaestis eaquibusam, ommodi sumUt et doluptatur adissim res
-                                        natum autatin ulluptatqui dolo et apidel iliquam velescit ut et im harum
-                                        acid quibus idunt ipitis dolo que essimai orempor empersp elique denisquodit,
-                                        aliqui ulpa de et aute poritat liasitae net mosam ipis nam et
-                                        harum volupiendae verum re volorioreste et aut assitemperi quam.</p></div>
-                                <div style="position: relative; float: left; width:15%;" >Foto</div>
-                            </div>
-
-                            <span style="color:#39F; font-weight: bold;">QUANDO:</span><br>
-                            Vedi calendario nella pagina delle NEWS<br><br>
-
-
-                            <span style="color:#39F; font-weight: bold;">CONTENUTI:</span><br>
-                            Il corso base è studiato per chi si avvicina al mondo dell’immersione in apnea. Si propone di far riscoprire il naturale gesto dell’apnea ed il benessere nell’ambiente acquatico e prevede una parte in piscina e una in acque libere. LA PARTE IN PISCINA consta di circa 28 ore di lezione (teoria e pratica) tra cui: acquaticità, esercizi a corpo libero, tecniche di base di respirazione (pranayama) e di rilassamento (training autogeno, training mentale ecc.), apnea statica e dinamica.<br>
-                            LA PARTE IN MARE prevede uscite per tuffarsi nel blu in assetto costante. Il corso comprende il manuale “Lezioni di apnea” di Umberto Pelizzari e Stefano Tovaglieri e il brevetto di 1° livello di Apnea Academy.<br><br>
-
-
-                            <span style="color:#39F; font-weight: bold;">REQUISITI:</span><br>
-                            Per iscriversi è necessario avere 14 anni, saper nuotare sufficientemente a rana e a stile libero e presentare un certificato medico di idoneità all’attività sportiva agonistica (rilasciabile da qualunque centro di medicina sportiva, nei link amici troverai un elenco completo). Non sono validi certificati non agonistici.<br><br>
-
-
-                            <span style="color:#39F; font-weight: bold;">ATTREZZATURA:</span><br>
-                            PER LA PARTE IN ACQUA occorrono maschera, aeratore, pinne, calzari e muta da apnea, cintura con zavorra (le prime 2 lezioni è necessario solo il costume e gli occhialini. Si terrà una spiegazione sull’attrezzatura, per cui si consiglia di attendere tale lezione prima di acquistarla). PER LE SEDUTE DI RESPIRAZIONE E RILASSAMENTO A SECCO occorre abbigliamento comodo (pantaloni, maglietta, tappetino, fazzoletti di carta). L’attrezzatura non è fornita dall’organizzazione; ogni allievo dovrà avere la propria.<br><br>
-
-
-                            <span style="color:#39F; font-weight: bold;">ACQUE LIBERE:</span><br>
-                            Le uscite in mare, per il conseguimento del brevetto di livello base di Apnea Academy, saranno comunicate durante il corso e sono organizzate da Clubapnea. Se l’allievo porta a termine la parte in piscina e non quella in mare, potrà farlo entro 1 anno. Decorso l’anno, dovrà ripetere il corso.<br><br>
-
-
-                            <span style="color:#39F; font-weight: bold;">ISCRIZIONE, COSTI:</span><br>
-                            L’intero corso (teoria e pratica in piscina e in acque libere, manuale e brevetto) costa 429 €. L’iscrizione si effettua presso la Segreteria di Clubapnea.<br><br>
+                            $template->display(array(
+                                'docs' => $docdata
+                            ));
+                            ?>
 
                         </div>
 
@@ -252,9 +214,7 @@
 
 
                         <div style="width:100%; height:100%; float:left; margin-left: 14px; margin-right:15px; margin-bottom:15px; color:#FFF; text-align: left; font-size:11px; margin-top:-10px;">
-                            <p><a href="#"><span style="color:#39F; font-weight: bold;">SCARICA IL PDF CON IL PROGRAMMA DEL CORSO COMPLETO</span></a></p>
 
-                            <div style="margin-top:-60px; margin-left:360px;"><a href="#"><img src="img/pdf.png" width="55"/></a></div><BR>
                             <p style="font-size:9px; margin-top:80px"> CLUB APNEA© 2013</p>
                         </div>
 

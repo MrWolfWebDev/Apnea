@@ -1,0 +1,9 @@
+{% block content %}
+
+{% for doc in docs %}
+
+<div class="doc">
+    {% include 'summaryitem.html' %}
+</div>
+{% endfor %}
+{% endblock content %}
