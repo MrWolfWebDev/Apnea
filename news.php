@@ -193,7 +193,6 @@
                             $docdata = json_decode($docdatajson);
 
                             $template->display(array(
-                                'PageTitle' => 'News',
                                 'docs' => $docdata
                             ));
                             ?>
