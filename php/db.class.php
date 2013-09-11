@@ -102,9 +102,37 @@ class Database {
 
 class DBNews extends Database {
 
-    public function fetchNews() {
+    // Fetch an array of News objects (defined in news.class.php)
+    public function fetchAll() {
+        $oldstmt = $this->stmt;
+        $this->query("SELECT * FROM news");
         $this->execute();
-        return $this->stmt->fetchAll(PDO::FETCH_CLASS, "News");
+        $result = $this->stmt->fetchAll(PDO::FETCH_CLASS, "News");
+        $this->stmt = $oldstmt;
+
+        return $result;
+    }
+
+    public function fetchSome($param) {
+        $oldstmt = $this->stmt;
+        $this->query("SELECT * FROM news LIMIT 0, $param");
+        try {
+            $this->execute();
+        }
+        // Catch any errors
+        catch (PDOException $e) {
+            $this->error = $e->getMessage();
+        }
+
+        $result = $this->stmt->fetchAll(PDO::FETCH_CLASS, "News");
+        $this->stmt = $oldstmt;
+
+        return $result;
+    }
+
+    public function insert($param) {
+        // TODO: finire insert
+        return $param;
     }
 
 }

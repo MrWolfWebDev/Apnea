@@ -9,5 +9,23 @@ class News {
     public $Foto;
     public $DataIns;
 
+    public function printNews() {
+        return 0;
+    }
+
+    public function toArray() {
+        $array = [
+            "IdNews" => $this->IdNews,
+            "Data" => $this->Data,
+            "Titolo" => $this->Titolo,
+            "Testo" => $this->Testo,
+            "Foto" => $this->Foto,
+            "DataIns" => $this->DataIns,
+        ];
+
+        return $array;
+    }
+
 }
+
 ?>

@@ -5,7 +5,7 @@ include 'php/dbconnection.php';
 
 // Include Database class
 include 'php/db.class.php';
-include_once 'php/news.class.php';
+// include_once 'php/news.class.php';
 
 /*
   $database = new Database();
@@ -34,11 +34,22 @@ include_once 'php/news.class.php';
 $newsDB = new DBNews();
 $newsDB->query('SELECT * FROM news');
 
-$result2 = $newsDB->fetchNews();
+$result1 = $newsDB->fetchAll();
 
-foreach ($result2 as $news) {
-    var_dump($news);
+foreach ($result1 as $news) {
     echo $news->IdNews . PHP_EOL;
     echo $news->Titolo . PHP_EOL;
+    echo '<br/>';
 }
+
+$result2 = $newsDB->fetchSome(2);
+
+foreach ($result2 as $news) {
+
+    echo implode(PHP_EOL, $news->toArray());
+
+    echo '<br/>';
+}
+
+echo date("Y-m-d");
 ?>
