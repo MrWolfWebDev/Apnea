@@ -197,30 +197,6 @@
                             ));
                             ?>
 
-                            <span style="color:#39F; font-weight: bold;">QUANDO:</span><br>
-                            Vedi calendario nella pagina delle NEWS<br><br>
-
-
-                            <span style="color:#39F; font-weight: bold;">CONTENUTI:</span><br>
-                            Il corso base è studiato per chi si avvicina al mondo dell’immersione in apnea. Si propone di far riscoprire il naturale gesto dell’apnea ed il benessere nell’ambiente acquatico e prevede una parte in piscina e una in acque libere. LA PARTE IN PISCINA consta di circa 28 ore di lezione (teoria e pratica) tra cui: acquaticità, esercizi a corpo libero, tecniche di base di respirazione (pranayama) e di rilassamento (training autogeno, training mentale ecc.), apnea statica e dinamica.<br>
-                            LA PARTE IN MARE prevede uscite per tuffarsi nel blu in assetto costante. Il corso comprende il manuale “Lezioni di apnea” di Umberto Pelizzari e Stefano Tovaglieri e il brevetto di 1° livello di Apnea Academy.<br><br>
-
-
-                            <span style="color:#39F; font-weight: bold;">REQUISITI:</span><br>
-                            Per iscriversi è necessario avere 14 anni, saper nuotare sufficientemente a rana e a stile libero e presentare un certificato medico di idoneità all’attività sportiva agonistica (rilasciabile da qualunque centro di medicina sportiva, nei link amici troverai un elenco completo). Non sono validi certificati non agonistici.<br><br>
-
-
-                            <span style="color:#39F; font-weight: bold;">ATTREZZATURA:</span><br>
-                            PER LA PARTE IN ACQUA occorrono maschera, aeratore, pinne, calzari e muta da apnea, cintura con zavorra (le prime 2 lezioni è necessario solo il costume e gli occhialini. Si terrà una spiegazione sull’attrezzatura, per cui si consiglia di attendere tale lezione prima di acquistarla). PER LE SEDUTE DI RESPIRAZIONE E RILASSAMENTO A SECCO occorre abbigliamento comodo (pantaloni, maglietta, tappetino, fazzoletti di carta). L’attrezzatura non è fornita dall’organizzazione; ogni allievo dovrà avere la propria.<br><br>
-
-
-                            <span style="color:#39F; font-weight: bold;">ACQUE LIBERE:</span><br>
-                            Le uscite in mare, per il conseguimento del brevetto di livello base di Apnea Academy, saranno comunicate durante il corso e sono organizzate da Clubapnea. Se l’allievo porta a termine la parte in piscina e non quella in mare, potrà farlo entro 1 anno. Decorso l’anno, dovrà ripetere il corso.<br><br>
-
-
-                            <span style="color:#39F; font-weight: bold;">ISCRIZIONE, COSTI:</span><br>
-                            L’intero corso (teoria e pratica in piscina e in acque libere, manuale e brevetto) costa 429 €. L’iscrizione si effettua presso la Segreteria di Clubapnea.<br><br>
-
                         </div>
 
 
@@ -238,9 +214,7 @@
 
 
                         <div style="width:100%; height:100%; float:left; margin-left: 14px; margin-right:15px; margin-bottom:15px; color:#FFF; text-align: left; font-size:11px; margin-top:-10px;">
-                            <p><a href="#"><span style="color:#39F; font-weight: bold;">SCARICA IL PDF CON IL PROGRAMMA DEL CORSO COMPLETO</span></a></p>
 
-                            <div style="margin-top:-60px; margin-left:360px;"><a href="#"><img src="img/pdf.png" width="55"/></a></div><BR>
                             <p style="font-size:9px; margin-top:80px"> CLUB APNEA© 2013</p>
                         </div>
 
