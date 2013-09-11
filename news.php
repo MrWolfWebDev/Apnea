@@ -63,41 +63,41 @@
 
         <script type="text/javascript">
             // test auto-ready logic - call corner before DOM is ready
-            $('#readyTest').corner();
+            $( '#readyTest' ).corner();
 
-            $(function() {
-                $('#dynCorner').click(function() {
-                    $('#dynamic').corner();
-                });
-                $('#dynUncorner').click(function() {
-                    $('#dynamic').uncorner();
-                });
+            $( function() {
+                $( '#dynCorner' ).click( function() {
+                    $( '#dynamic' ).corner();
+                } );
+                $( '#dynUncorner' ).click( function() {
+                    $( '#dynamic' ).uncorner();
+                } );
 
-                $('div.inner').wrap('<div class="outer"></div>');
-                $('p').wrap("<code></code>");
+                $( 'div.inner' ).wrap( '<div class="outer"></div>' );
+                $( 'p' ).wrap( "<code></code>" );
 
-                $('div.demo, div.inner').each(function() {
-                    var t = $('p', this).text();
-                    eval(t);
-                });
+                $( 'div.demo, div.inner' ).each( function() {
+                    var t = $( 'p', this ).text();
+                    eval( t );
+                } );
 
                 // fixed/fluid tests
-                $("div.box, div.plain").corner();
-                $("#abs").corner("cc:#08e");
+                $( "div.box, div.plain" ).corner();
+                $( "#abs" ).corner( "cc:#08e" );
 
-                $('.myCorner').corner();
-            });
+                $( '.myCorner' ).corner();
+            } );
         </script>
 
         <script type="text/javascript">
 
             /* angoli box sopra */
-            $('.demo').corner("top 10px");
+            $( '.demo' ).corner( "top 10px" );
 
             /* angoli box chiusura */
-            $('.demo2').corner("bottom 10px");
+            $( '.demo2' ).corner( "bottom 10px" );
 
-            $('.portfolio-thumbs figure').corner("top 10px");
+            $( '.portfolio-thumbs figure' ).corner( "top 10px" );
 
         </script>
 
@@ -109,15 +109,15 @@
         <!-- js per bottone FaceBook -->
 
         <div id="fb-root"></div>
-        <script>(function(d, s, id) {
-                var js, fjs = d.getElementsByTagName(s)[0];
-                if (d.getElementById(id))
+        <script>( function( d, s, id ) {
+                var js, fjs = d.getElementsByTagName( s )[0];
+                if ( d.getElementById( id ) )
                     return;
-                js = d.createElement(s);
+                js = d.createElement( s );
                 js.id = id;
                 js.src = "//connect.facebook.net/it_IT/all.js#xfbml=1";
-                fjs.parentNode.insertBefore(js, fjs);
-            }(document, 'script', 'facebook-jssdk'));</script>
+                fjs.parentNode.insertBefore( js, fjs );
+            }( document, 'script', 'facebook-jssdk' ) );</script>
         <!-- END js per bottone FaceBook -->
 
 

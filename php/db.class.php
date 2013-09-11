@@ -1,19 +1,21 @@
 <?php
 
+include 'news.class.php';
+
 // Database class (Using PDO)
 class Database {
 
-    private $host = DB_HOST;
-    private $user = DB_USER;
-    private $pass = DB_PASS;
-    private $dbname = DB_NAME;
-    private $dbh;
-    private $error;
-    private $stmt;
+    protected $host = DB_HOST;
+    protected $user = DB_USER;
+    protected $pass = DB_PASS;
+    protected $dbname = DB_NAME;
+    protected $dbh;
+    protected $error;
+    protected $stmt;
 
     public function __construct() {
         // Set DSN
-        $dsn = 'mysql:host=' . $this->host . ';dbname=' . $this->dbname;
+        $dsn = DB_TYPE . ':host=' . $this->host . ';dbname=' . $this->dbname;
         // Set options
         $options = array(
             PDO::ATTR_PERSISTENT => true,
@@ -95,3 +97,43 @@ class Database {
     }
 
 }
+
+// DBNews class (Extends Database class) (Using PDO)
+
+class DBNews extends Database {
+
+    // Fetch an array of News objects (defined in news.class.php)
+    public function fetchAll() {
+        $oldstmt = $this->stmt;
+        $this->query("SELECT * FROM news");
+        $this->execute();
+        $result = $this->stmt->fetchAll(PDO::FETCH_CLASS, "News");
+        $this->stmt = $oldstmt;
+
+        return $result;
+    }
+
+    public function fetchSome($param) {
+        $oldstmt = $this->stmt;
+        $this->query("SELECT * FROM news LIMIT 0, $param");
+        try {
+            $this->execute();
+        }
+        // Catch any errors
+        catch (PDOException $e) {
+            $this->error = $e->getMessage();
+        }
+
+        $result = $this->stmt->fetchAll(PDO::FETCH_CLASS, "News");
+        $this->stmt = $oldstmt;
+
+        return $result;
+    }
+
+    public function insert($param) {
+        // TODO: finire insert
+        return $param;
+    }
+
+}
+
