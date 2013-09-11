@@ -214,14 +214,8 @@ pip-log.txt
 #Mr Developer
 .mr.developer.cfg
 
-################
-## Netbeans
-################
-
-nbproject/
-
-################
-## Design Files
-################
+###############
+# Design Files
+###############
 
 *.pdf
