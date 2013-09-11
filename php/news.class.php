@@ -13,6 +13,20 @@ class News {
         return 0;
     }
 
+    public function fromArray($array) {
+        if (array_key_exists("IdNews", $array)) {
+            $this->IdNews = $array["IdNews"];
+        } else {
+            $this->IdNews = -1;
+        }
+
+        $this->Data = $array["Data"];
+        $this->Titolo = $array["Titolo"];
+        $this->Testo = $array["Testo"];
+        $this->Foto = $array["Foto"];
+        $this->DataIns = $array["DataIns"];
+    }
+
     public function toArray() {
         $array = [
             "IdNews" => $this->IdNews,

@@ -32,7 +32,19 @@ include 'php/db.class.php';
  */
 
 $newsDB = new DBNews();
-$newsDB->query('SELECT * FROM news');
+$currdate = date("Y-m-d");
+$array = [
+    "IdNews" => 0,
+    "Data" => "2008-12-12",
+    "Titolo" => "Ciao a tutti",
+    "Testo" => "Testo aggiunto, nuova news",
+    "Foto" => "img/news/ciao.jpg",
+    "DataIns" => $currdate,
+];
+
+$news = new News();
+$news->fromArray($array);
+$newsDB->insert($news);
 
 $result1 = $newsDB->fetchAll();
 

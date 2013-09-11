@@ -104,18 +104,14 @@ class DBNews extends Database {
 
     // Fetch an array of News objects (defined in news.class.php)
     public function fetchAll() {
-        $oldstmt = $this->stmt;
         $this->query("SELECT * FROM news");
         $this->execute();
-        $result = $this->stmt->fetchAll(PDO::FETCH_CLASS, "News");
-        $this->stmt = $oldstmt;
 
-        return $result;
+        return $this->stmt->fetchAll(PDO::FETCH_CLASS, "News");
     }
 
-    public function fetchSome($param) {
-        $oldstmt = $this->stmt;
-        $this->query("SELECT * FROM news LIMIT 0, $param");
+    public function fetchSome($num = 1) {
+        $this->query("SELECT * FROM news LIMIT 0, $num");
         try {
             $this->execute();
         }
@@ -124,15 +120,24 @@ class DBNews extends Database {
             $this->error = $e->getMessage();
         }
 
-        $result = $this->stmt->fetchAll(PDO::FETCH_CLASS, "News");
-        $this->stmt = $oldstmt;
-
-        return $result;
+        return $this->stmt->fetchAll(PDO::FETCH_CLASS, "News");
     }
 
-    public function insert($param) {
-        // TODO: finire insert
-        return $param;
+    public function insert($news) {
+        $this->query("INSERT INTO `news` (`Data`, `Titolo`, `Testo`, `Foto`, `DataIns`) VALUES (:data, :titolo, :testo, :foto, :dataIns)");
+
+        $this->bind(':data', $news->Data);
+        $this->bind(':titolo', $news->Titolo);
+        $this->bind(':testo', $news->Testo);
+        $this->bind(':foto', $news->Foto);
+        $this->bind(':dataIns', date("Y-m-d"));
+        try {
+            $this->execute();
+            return 1;
+        } catch (PDOException $e) {
+            $this->error = $e->getMessage();
+            return $this->error;
+        }
     }
 
 }
