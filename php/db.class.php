@@ -112,6 +112,8 @@ class DBNews extends Database {
 
     public function fetchSome($num = 1) {
         $this->query("SELECT * FROM news LIMIT 0, $num");
+
+        $this->bind(':num', $num);
         try {
             $this->execute();
         }
@@ -141,7 +143,27 @@ class DBNews extends Database {
     }
 
     public function delete($id) {
-        $this->query("DELETE FROM `news` where `IdNews` = $id");
+        $this->query("DELETE FROM `news` where `IdNews` = :id");
+
+        $this->bind(':id', $id);
+        try {
+            $this->execute();
+            return true;
+        } catch (PDOException $e) {
+            $this->error = $e->getMessage();
+            return $this->error;
+        }
+    }
+
+    public function update($news, $id) {
+        $this->query("UPDATE news SET Data = :data, Titolo = :titolo, Testo = :testo, Foto = :foto, DataIns = :dataIns WHERE IdNews = :idNews");
+
+        $this->bind(':idNews', $id);
+        $this->bind(':data', $news->Data);
+        $this->bind(':titolo', $news->Titolo);
+        $this->bind(':testo', $news->Testo);
+        $this->bind(':foto', $news->Foto);
+        $this->bind(':dataIns', date("Y-m-d"));
         try {
             $this->execute();
             return true;
