@@ -133,7 +133,18 @@ class DBNews extends Database {
         $this->bind(':dataIns', date("Y-m-d"));
         try {
             $this->execute();
-            return 1;
+            return true;
+        } catch (PDOException $e) {
+            $this->error = $e->getMessage();
+            return $this->error;
+        }
+    }
+
+    public function delete($id) {
+        $this->query("DELETE FROM `news` where `IdNews` = $id");
+        try {
+            $this->execute();
+            return true;
         } catch (PDOException $e) {
             $this->error = $e->getMessage();
             return $this->error;

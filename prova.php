@@ -46,6 +46,8 @@ $news = new News();
 $news->fromArray($array);
 $newsDB->insert($news);
 
+$newsDB->delete(26);
+
 $result1 = $newsDB->fetchAll();
 
 foreach ($result1 as $news) {
