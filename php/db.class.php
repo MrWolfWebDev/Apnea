@@ -102,16 +102,21 @@ class Database {
 
 class DBNews extends Database {
 
+    protected $selectQuery = "SELECT * FROM news";
+    protected $insertQuery = "INSERT INTO `news` (`Data`, `Titolo`, `Testo`, `Foto`, `DataIns`) VALUES (:data, :titolo, :testo, :foto, :dataIns)";
+    protected $updateQuery = "UPDATE news SET Data = :data, Titolo = :titolo, Testo = :testo, Foto = :foto, DataIns = :dataIns WHERE ID = :iD";
+    protected $deleteQuery = "DELETE FROM `news` where `IdNews` = :iD";
+
     // Fetch an array of News objects (defined in news.class.php)
     public function fetchAll() {
-        $this->query("SELECT * FROM news");
+        $this->query($this->selectQuery);
         $this->execute();
 
         return $this->stmt->fetchAll(PDO::FETCH_CLASS, "News");
     }
 
     public function fetchSome($num = 1) {
-        $this->query("SELECT * FROM news LIMIT 0, $num");
+        $this->query($this->selectQuery . "LIMIT 0, $num");
 
         $this->bind(':num', $num);
         try {
@@ -126,7 +131,7 @@ class DBNews extends Database {
     }
 
     public function insert($news) {
-        $this->query("INSERT INTO `news` (`Data`, `Titolo`, `Testo`, `Foto`, `DataIns`) VALUES (:data, :titolo, :testo, :foto, :dataIns)");
+        $this->query($this->insertQuery);
 
         $this->bind(':data', $news->Data);
         $this->bind(':titolo', $news->Titolo);
@@ -142,10 +147,10 @@ class DBNews extends Database {
         }
     }
 
-    public function delete($id) {
-        $this->query("DELETE FROM `news` where `IdNews` = :id");
+    public function delete($ID) {
+        $this->query($this->deleteQuery);
 
-        $this->bind(':id', $id);
+        $this->bind(':iD', $ID);
         try {
             $this->execute();
             return true;
@@ -155,10 +160,10 @@ class DBNews extends Database {
         }
     }
 
-    public function update($news, $id) {
-        $this->query("UPDATE news SET Data = :data, Titolo = :titolo, Testo = :testo, Foto = :foto, DataIns = :dataIns WHERE IdNews = :idNews");
+    public function update($news, $ID) {
+        $this->query($this->updateQuery);
 
-        $this->bind(':idNews', $id);
+        $this->bind(':iD', $ID);
         $this->bind(':data', $news->Data);
         $this->bind(':titolo', $news->Titolo);
         $this->bind(':testo', $news->Testo);
@@ -174,4 +179,3 @@ class DBNews extends Database {
     }
 
 }
-

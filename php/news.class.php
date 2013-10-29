@@ -2,47 +2,37 @@
 
 class News {
 
-    public $IdNews;
-    public $Data;
-    public $Titolo;
-    public $Testo;
-    public $Foto;
-    public $DataIns;
-
-    public function printNews() {
-        return 0;
-    }
-
     public function fromArray($array) {
-        if (array_key_exists("IdNews", $array)) {
-            $this->IdNews = $array["IdNews"];
+        if (array_key_exists("ID", $array)) {
+            $this->ID = $array["ID"];
         } else {
-            $this->IdNews = -1;
+            $this->ID = -1;
         }
-
-        $this->Data = $array["Data"];
-        $this->Titolo = $array["Titolo"];
-        $this->Testo = $array["Testo"];
-        $this->Foto = $array["Foto"];
-        $this->DataIns = $array["DataIns"];
+        foreach ($array as $key => $value) {
+            $this->$key = $value;
+        }
     }
 
     public function toArray() {
-        $array = [
-            "IdNews" => $this->IdNews,
-            "Data" => $this->Data,
-            "Titolo" => $this->Titolo,
-            "Testo" => $this->Testo,
-            "Foto" => $this->Foto,
-            "DataIns" => $this->DataIns,
-        ];
+
+        $array = get_object_vars($this);
+        /*
+          $array = [
+          "ID" => $this->IdNews,
+          "Data" => $this->Data,
+          "Titolo" => $this->Titolo,
+          "Testo" => $this->Testo,
+          "Foto" => $this->Foto,
+          "DataIns" => $this->DataIns,
+          ];
+         */
 
         return $array;
     }
 
-    public function toString($glue = ",") {
+    public function __toString() {
         $array = $this->toArray();
-        $string = implode($glue, $array);
+        $string = implode(',', $array);
 
         return $string;
     }
