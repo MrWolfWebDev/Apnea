@@ -24,28 +24,28 @@ class Database {
 
         // Create a new PDO istance
         try {
-            $this->dbh = new PDO($dsn, $this->user, $this->pass, $options);
+            $this->dbh = new PDO( $dsn, $this->user, $this->pass, $options );
         }
         // Catch any errors
-        catch (PDOException $e) {
+        catch ( PDOException $e ) {
             $this->error = $e->getMessage();
         }
     }
 
-    public function query($query) {
-        $this->stmt = $this->dbh->prepare($query);
+    public function query( $query ) {
+        $this->stmt = $this->dbh->prepare( $query );
     }
 
-    public function bind($param, $value, $type = NULL) {
-        if (is_null($type)) {
-            switch (true) {
-                case is_int($value):
+    public function bind( $param, $value, $type = NULL ) {
+        if ( is_null( $type ) ) {
+            switch ( true ) {
+                case is_int( $value ):
                     $type = PDO::PARAM_INT;
                     break;
-                case is_bool($value):
+                case is_bool( $value ):
                     $type = PDO::PARAM_BOOL;
                     break;
-                case is_null($value):
+                case is_null( $value ):
                     $type = PDO::PARAM_NULL;
                     break;
                 default:
@@ -53,7 +53,7 @@ class Database {
             }
         }
 
-        $this->stmt->bindValue($param, $value, $type);
+        $this->stmt->bindValue( $param, $value, $type );
     }
 
     public function execute() {
@@ -62,12 +62,12 @@ class Database {
 
     public function resultset() {
         $this->execute();
-        return $this->stmt->fetchAll(PDO::FETCH_ASSOC);
+        return $this->stmt->fetchAll( PDO::FETCH_ASSOC );
     }
 
     public function single() {
         $this->execute();
-        return $this->stmt->fetch(PDO::FETCH_ASSOC);
+        return $this->stmt->fetch( PDO::FETCH_ASSOC );
     }
 
     // Number of affected rows
@@ -100,81 +100,140 @@ class Database {
 
 // DBNews class (Extends Database class) (Using PDO)
 
-class DBNews extends Database {
+class TableNews extends Database {
 
+    /**
+     *
+     * CRUD Methods
+     */
     protected $selectQuery = "SELECT * FROM news";
     protected $insertQuery = "INSERT INTO `news` (`Data`, `Titolo`, `Testo`, `Foto`, `DataIns`) VALUES (:data, :titolo, :testo, :foto, :dataIns)";
     protected $updateQuery = "UPDATE news SET Data = :data, Titolo = :titolo, Testo = :testo, Foto = :foto, DataIns = :dataIns WHERE ID = :iD";
     protected $deleteQuery = "DELETE FROM `news` where `IdNews` = :iD";
+    // Used class
+    protected $class = "News";
+    // Table fields
+    protected $fields = array(
+        "Data",
+        "Titolo",
+        "Testo",
+        "Foto",
+        "DataIns"
+    );
 
     // Fetch an array of News objects (defined in news.class.php)
     public function fetchAll() {
-        $this->query($this->selectQuery);
+        $this->query( $this->selectQuery );
         $this->execute();
 
-        return $this->stmt->fetchAll(PDO::FETCH_CLASS, "News");
+        return $this->stmt->fetchAll( PDO::FETCH_CLASS, $this->class );
     }
 
-    public function fetchSome($num = 1) {
-        $this->query($this->selectQuery . "LIMIT 0, $num");
+    public function fetchSome( $num = 1 ) {
+        $this->query( $this->selectQuery . "LIMIT 0, $num" );
 
-        $this->bind(':num', $num);
+        $this->bind( ':num', $num );
         try {
             $this->execute();
         }
         // Catch any errors
-        catch (PDOException $e) {
+        catch ( PDOException $e ) {
             $this->error = $e->getMessage();
         }
 
-        return $this->stmt->fetchAll(PDO::FETCH_CLASS, "News");
+        return $this->stmt->fetchAll( PDO::FETCH_CLASS, $this->class );
     }
 
-    public function insert($news) {
-        $this->query($this->insertQuery);
+    public function insert( $obj ) {
+        $this->query( $this->insertQuery );
 
-        $this->bind(':data', $news->Data);
-        $this->bind(':titolo', $news->Titolo);
-        $this->bind(':testo', $news->Testo);
-        $this->bind(':foto', $news->Foto);
-        $this->bind(':dataIns', date("Y-m-d"));
+        if ( is_array( $obj ) ) {
+            $this->bindArray( $obj );
+            $this->bind( ':dataIns', date( "Y-m-d" ) );
+        }
+        elseif ( is_object( $obj ) ) {
+            if ( get_class( $obj ) == $this->class ) {
+                $this->bindObject( $obj );
+                $this->bind( ':dataIns', date( "Y-m-d" ) );
+            }
+        }
+        else {
+            echo "Invalid parameters (must be array or $this->class type)";
+        }
+
+
         try {
             $this->execute();
             return true;
-        } catch (PDOException $e) {
+        }
+        catch ( PDOException $e ) {
             $this->error = $e->getMessage();
             return $this->error;
         }
     }
 
-    public function delete($ID) {
-        $this->query($this->deleteQuery);
+    public function delete( $ID ) {
+        if ( is_int( $ID ) ) {
+            $this->query( $this->deleteQuery );
 
-        $this->bind(':iD', $ID);
+            $this->bind( ':iD', $ID );
+            try {
+                $this->execute();
+                return true;
+            }
+            catch ( PDOException $e ) {
+                $this->error = $e->getMessage();
+                return $this->error;
+            }
+        }
+
+        if ( is_array( $ID ) ) {
+            foreach ( $ID as $id ) {
+                $this->query( $this->deleteQuery );
+
+                $this->bind( ':iD', $id );
+                try {
+                    $this->execute();
+                    return true;
+                }
+                catch ( PDOException $e ) {
+                    $this->error = $e->getMessage();
+                    return $this->error;
+                }
+            }
+        }
+    }
+
+    public function update( $obj, $ID ) {
+        $this->query( $this->updateQuery );
+
+        $this->bind( ':iD', $ID );
+        $this->bind( ':data', $obj->Data );
+        $this->bind( ':titolo', $obj->Titolo );
+        $this->bind( ':testo', $obj->Testo );
+        $this->bind( ':foto', $obj->Foto );
+        $this->bind( ':dataIns', date( "Y-m-d" ) );
         try {
             $this->execute();
             return true;
-        } catch (PDOException $e) {
+        }
+        catch ( PDOException $e ) {
             $this->error = $e->getMessage();
             return $this->error;
         }
     }
 
-    public function update($news, $ID) {
-        $this->query($this->updateQuery);
+    // Utilities
 
-        $this->bind(':iD', $ID);
-        $this->bind(':data', $news->Data);
-        $this->bind(':titolo', $news->Titolo);
-        $this->bind(':testo', $news->Testo);
-        $this->bind(':foto', $news->Foto);
-        $this->bind(':dataIns', date("Y-m-d"));
-        try {
-            $this->execute();
-            return true;
-        } catch (PDOException $e) {
-            $this->error = $e->getMessage();
-            return $this->error;
+    public function bindArray( $obj ) {
+        foreach ( $this->fields as $field ) {
+            $this->bind( ':' . lcfirst( $field ), $obj[$field] );
+        }
+    }
+
+    public function bindObject( $obj ) {
+        foreach ( $this->fields as $field ) {
+            $this->bind( ':' . lcfirst( $field ), $obj->$field );
         }
     }
 
