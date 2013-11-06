@@ -1,8 +1,5 @@
 <?php
 
-// Include Database config
-include 'php/dbconnection.php';
-
 // Include Database class
 include 'php/db.class.php';
 
@@ -18,8 +15,8 @@ $array = [
 
 $news = new News();
 $news->fromArray( $array );
-// $newsDB->insert( $array );
-$newsDB->update( $news, 57 );
+$newsDB->insert( $array );
+$newsDB->update( $news, 44 );
 
 $newsDB->delete( 37 );
 
@@ -40,3 +37,7 @@ foreach ( $result2 as $news ) {
 }
 
 echo date( "Y-m-d" );
+
+echo '<br/>';
+
+echo $newsDB->lastInsertId();

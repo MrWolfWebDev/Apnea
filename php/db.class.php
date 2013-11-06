@@ -1,5 +1,6 @@
 <?php
 
+include 'dbconnection.php';
 include 'news.class.php';
 
 // Database class (Using PDO)
@@ -106,13 +107,18 @@ class TableNews extends Database {
      *
      * CRUD Methods
      */
-    protected $selectQuery = "SELECT * FROM news";
-    protected $insertQuery = "INSERT INTO `news` (`Data`, `Titolo`, `Testo`, `Foto`, `DataIns`) VALUES (:data, :titolo, :testo, :foto, :dataIns)";
-    protected $updateQuery = "UPDATE news SET Data = :data, Titolo = :titolo, Testo = :testo, Foto = :foto, DataIns = :dataIns WHERE ID = :iD";
-    protected $deleteQuery = "DELETE FROM `news` where `IdNews` = :iD";
+    protected $selectQuery;
+    protected $selectByIDQuery;
+    protected $insertQuery;
+    protected $updateQuery;
+    protected $deleteQuery;
     // Used class
-    protected $class = "News";
-    // Table fields
+    protected $usedClass;
+
+    /**
+     *
+     * @var type    Must be an array of Table Column names
+     */
     protected $fields = array(
         "Data",
         "Titolo",
@@ -121,12 +127,45 @@ class TableNews extends Database {
         "DataIns"
     );
 
+    public function __construct() {
+
+        parent::__construct();
+
+        $this->usedClass = "news";
+        /**
+         *
+         * CRUD Methods
+         */
+        $this->selectQuery = "SELECT * FROM news";
+        $this->selectByIDQuery = "SELECT * FROM news WHERE ID = :iD";
+        $this->insertQuery = "INSERT INTO `news` (`Data`, `Titolo`, `Testo`, `Foto`, `DataIns`) VALUES (:data, :titolo, :testo, :foto, :dataIns)";
+        $this->updateQuery = "UPDATE news SET Data = :data, Titolo = :titolo, Testo = :testo, Foto = :foto, DataIns = :dataIns WHERE ID = :iD";
+        $this->deleteQuery = "DELETE FROM `news` where `ID` = :iD";
+
+        // Set DSN
+        $dsn = DB_TYPE . ':host=' . $this->host . ';dbname=' . $this->dbname;
+        // Set options
+        $options = array(
+            PDO::ATTR_PERSISTENT => true,
+            PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION
+        );
+
+        // Create a new PDO istance
+        try {
+            $this->dbh = new PDO( $dsn, $this->user, $this->pass, $options );
+        }
+        // Catch any errors
+        catch ( PDOException $e ) {
+            $this->error = $e->getMessage();
+        }
+    }
+
     // Fetch an array of News objects (defined in news.class.php)
     public function fetchAll() {
         $this->query( $this->selectQuery );
         $this->execute();
 
-        return $this->stmt->fetchAll( PDO::FETCH_CLASS, $this->class );
+        return $this->stmt->fetchAll( PDO::FETCH_CLASS, $this->usedClass );
     }
 
     public function fetchSome( $num = 1 ) {
@@ -141,7 +180,12 @@ class TableNews extends Database {
             $this->error = $e->getMessage();
         }
 
-        return $this->stmt->fetchAll( PDO::FETCH_CLASS, $this->class );
+        return $this->stmt->fetchAll( PDO::FETCH_CLASS, $this->usedClass );
+    }
+
+    public function fetchIDWhere( $where ) {
+
+        return $IDArray;
     }
 
     public function insert( $obj ) {
@@ -207,11 +251,8 @@ class TableNews extends Database {
     public function update( $obj, $ID ) {
         $this->query( $this->updateQuery );
 
+        $this->bindObject( $obj );
         $this->bind( ':iD', $ID );
-        $this->bind( ':data', $obj->Data );
-        $this->bind( ':titolo', $obj->Titolo );
-        $this->bind( ':testo', $obj->Testo );
-        $this->bind( ':foto', $obj->Foto );
         $this->bind( ':dataIns', date( "Y-m-d" ) );
         try {
             $this->execute();
