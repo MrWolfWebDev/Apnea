@@ -104,7 +104,7 @@
 
     </head>
 
-    <body lang="en">
+    <body lang="it" id="News">
 
         <!-- js per bottone FaceBook -->
 
@@ -138,17 +138,11 @@
                     </div>
 
                     <!--   MENU' PRINCIPALE -->
-                    <div id="combo-holder"></div>
-                    <nav style="height: 30px;">
-                        <ul id="nav" class="sf-menu">
-                            <li><a href="#" style="font-size: 12px; letter-spacing: 2px; padding-left: 10px; padding-right: 10px;">CORSI</a></li>
-                            <li><a href="#" style="font-size: 12px; letter-spacing: 2px; padding-left: 10px; padding-right: 10px;">CHI SIAMO</a></li>
-                            <li><a href="#" style="font-size: 12px; letter-spacing: 2px; padding-left: 10px; padding-right: 10px;">ISCRIVITI</a></li>
-                            <li><a href="gallery.php" style="font-size: 12px; letter-spacing: 2px; padding-left: 10px; padding-right: 10px;">GALLERY</a></li>
-                            <li><a href="#" style="font-size: 12px; letter-spacing: 2px; padding-left: 10px; padding-right: 10px;">CONTATTI</a></li>
-                            <li><a href="news.php" style="border-right: 0px solid; font-size: 12px; letter-spacing: 2px; padding-left: 10px; padding-right: 10px;  color: #39F;">NEWS</a></li>
-                        </ul>
-                    </nav>
+                    <?php
+                    include 'includes/mainmenu.html';
+                    ?>
+
+
                 </div>
             </div>
 
@@ -175,7 +169,7 @@
                         <!-- area testo -->
 
 
-                        <div style="width:53%; height:100%; float:left; margin-left: 14px; margin-right:15px; margin-bottom:15px; color:#FFF; text-align:justify; font-size:11px; line-height:15px;">
+                        <div style="width:66%; height:100%; float:left; margin-left: 14px; margin-right:15px; margin-bottom:15px; color:#FFF; text-align:justify; font-size:11px; line-height:15px;">
                             <?php
                             require_once 'lib/Twig/Autoloader.php';
                             Twig_Autoloader::register();
@@ -185,12 +179,15 @@
                                 //'debug' => TRUE,
                                 'cache' => 'compilation_cache',
                                 'auto_reload' => TRUE
-                            ));
+                                    ));
 
                             $template = $twig->loadTemplate('listview.html');
 
-                            $docdatajson = '[{"data":"11/09/2013","titolo":"Peni","testo":"grandi e neri","foto":"peni.jpg"}]';
-                            $docdata = json_decode($docdatajson);
+                            include 'php/Table.class.php';
+
+                            $news = new Table("news");
+
+                            $docdata = $news->fetchArray();
 
                             $template->display(array(
                                 'docs' => $docdata
@@ -206,12 +203,6 @@
                         <div style="width:28%; height:100%; float:right; padding-right: 20px; margin-bottom:20px;">
                             <img src="img/corsi/respirazione/02.jpg" style="width: 100%" alt="foto"/>
                         </div>
-
-                        <!-- area foto 2 -->
-                        <div style="width:28%; height:100%; float:right; padding-right: 20px; margin-bottom:20px;">
-                            <img src="img/corsi/respirazione/03.jpg" style="width: 100%" alt="foto" />
-                        </div>
-
 
                         <div style="width:100%; height:100%; float:left; margin-left: 14px; margin-right:15px; margin-bottom:15px; color:#FFF; text-align: left; font-size:11px; margin-top:-10px;">
 

@@ -1,0 +1,15 @@
+{% for doc in docs %}
+
+{% if doc.Gallery == 10 %}
+<figure>
+    <p>reset</p>
+    <figcaption>
+        <strong>{{ doc.Titolo }}<BR>
+            <p style="font-weight:normal; font-size:12px;"><br><br>Clicca per visualizzare il video</p></strong>
+    </figcaption>
+
+    <a href="{{ doc.Path }}" rel="prettyPhoto"><img src="images/gallery/vid.jpg" alt="CLUB APNEA" /></a>
+</figure>
+{% endif %}
+
+{% endfor %}

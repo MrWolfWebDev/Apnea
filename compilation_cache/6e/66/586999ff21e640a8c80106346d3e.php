@@ -26,9 +26,8 @@ class __TwigTemplate_6e66586999ff21e640a8c80106346d3e extends Twig_Template
         echo "
 ";
         // line 3
-        if (isset($context["docs"])) { $_docs_ = $context["docs"]; } else { $_docs_ = null; }
         $context['_parent'] = (array) $context;
-        $context['_seq'] = twig_ensure_traversable($_docs_);
+        $context['_seq'] = twig_ensure_traversable((isset($context["docs"]) ? $context["docs"] : null));
         $context['loop'] = array(
           'parent' => $context['_parent'],
           'index0' => 0,
@@ -45,10 +44,10 @@ class __TwigTemplate_6e66586999ff21e640a8c80106346d3e extends Twig_Template
         foreach ($context['_seq'] as $context["_key"] => $context["doc"]) {
             // line 4
             echo "
-<div class=\"doc\">
+<div class=\"doc\" style=\"margin-bottom: 10px;\">
     ";
             // line 6
-            $this->env->loadTemplate("summaryitem.html")->display($context);
+            $this->env->loadTemplate("summaryitem.php")->display($context);
             // line 7
             echo "</div>
 ";
@@ -73,6 +72,6 @@ class __TwigTemplate_6e66586999ff21e640a8c80106346d3e extends Twig_Template
 
     public function getDebugInfo()
     {
-        return array (  53 => 7,  51 => 6,  47 => 4,  29 => 3,  26 => 2,  20 => 1,);
+        return array (  52 => 7,  50 => 6,  46 => 4,  29 => 3,  26 => 2,  20 => 1,);
     }
 }

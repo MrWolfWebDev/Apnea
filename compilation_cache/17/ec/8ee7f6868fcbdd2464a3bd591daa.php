@@ -22,7 +22,7 @@ class __TwigTemplate_17ec8ee7f6868fcbdd2464a3bd591daa extends Twig_Template
         if (isset($context["doc"])) { $_doc_ = $context["doc"]; } else { $_doc_ = null; }
         echo twig_escape_filter($this->env, $this->getAttribute($_doc_, "data"), "html", null, true);
         echo "</div>
-    <div style=\"position: relative; float: left; width: 70%;\">
+    <div style=\"position: relative; float: left; width: 57%;\">
         <p style=\"font-family:Arial, Helvetica, sans-serif; color:#FFF; font-size:18px; text-transform: uppercase; \">";
         // line 4
         if (isset($context["doc"])) { $_doc_ = $context["doc"]; } else { $_doc_ = null; }
@@ -35,12 +35,20 @@ class __TwigTemplate_17ec8ee7f6868fcbdd2464a3bd591daa extends Twig_Template
         if (isset($context["doc"])) { $_doc_ = $context["doc"]; } else { $_doc_ = null; }
         echo twig_escape_filter($this->env, $this->getAttribute($_doc_, "testo"), "html", null, true);
         echo "
-        </p></div>
-    <div style=\"position: relative; float: left; width:15%;\" >";
-        // line 9
+        </p>
+
+
+        <!-- area foto 2 -->
+    </div>
+
+    <div style=\"position: relative;width:25%; height:100%; float:left; padding-right: 20px; margin-bottom:20px;\">
+        <img src=\"";
+        // line 15
         if (isset($context["doc"])) { $_doc_ = $context["doc"]; } else { $_doc_ = null; }
         echo twig_escape_filter($this->env, $this->getAttribute($_doc_, "foto"), "html", null, true);
-        echo "</div>
+        echo "\" style=\"width: 100%\" alt=\"foto\" />
+    </div>
+
 </div><br>
 <div style=\"clear: both;\"></div>
 <hr style=\"background:#FFF; border:0; height:1px\" />
@@ -59,6 +67,6 @@ class __TwigTemplate_17ec8ee7f6868fcbdd2464a3bd591daa extends Twig_Template
 
     public function getDebugInfo()
     {
-        return array (  41 => 9,  35 => 7,  28 => 4,  22 => 2,  19 => 1,);
+        return array (  35 => 7,  28 => 4,  22 => 2,  19 => 1,  53 => 7,  51 => 6,  47 => 15,  29 => 3,  26 => 2,  20 => 1,);
     }
 }

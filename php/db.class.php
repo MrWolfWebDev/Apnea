@@ -1,5 +1,8 @@
 <?php
 
+/**
+ * @todo Spostare nel costruttore
+ */
 include 'dbconnection.php';
 include 'news.class.php';
 
