@@ -143,7 +143,7 @@
 
                     <!--   MENU' ADULTI -->
                     <?php
-                    include 'includes/corsimenu.html';
+                    include 'includes/gallerymenu.html';
                     ?>
                 </div>
             </div>
