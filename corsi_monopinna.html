@@ -1,0 +1,305 @@
+<!doctype html>
+<html class="no-js">
+
+    <head>
+        <meta charset="utf-8"/>
+        <title>CLUB APNEA - Corso Apnea Monopinna</title>
+
+        <!--[if lt IE 9]>
+                <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+        <link rel="stylesheet" media="all" href="css/style.css"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <!-- Adding "maximum-scale=1" fixes the Mobile Safari auto-zoom bug: http://filamentgroup.com/examples/iosScaleBug/ -->
+
+
+        <!-- JS -->
+        <script src="js/jquery-1.6.4.min.js"></script>
+        <script src="js/css3-mediaqueries.js"></script>
+        <script src="js/custom.js"></script>
+        <script src="js/tabs.js"></script>
+        <script src="js/jquery.corner.js"></script>
+
+        <!-- Tweet -->
+        <link rel="stylesheet" href="css/jquery.tweet.css" media="all"  />
+        <script src="js/tweet/jquery.tweet.js" ></script>
+        <!-- ENDS Tweet -->
+
+        <!-- superfish -->
+        <link rel="stylesheet" media="screen" href="css/superfish.css" />
+        <script  src="js/superfish-1.4.8/js/hoverIntent.js"></script>
+        <script  src="js/superfish-1.4.8/js/superfish.js"></script>
+        <script  src="js/superfish-1.4.8/js/supersubs.js"></script>
+        <!-- ENDS superfish -->
+
+        <!-- prettyPhoto -->
+        <script  src="js/prettyPhoto/js/jquery.prettyPhoto.js"></script>
+        <link rel="stylesheet" href="js/prettyPhoto/css/prettyPhoto.css"  media="screen" />
+        <!-- ENDS prettyPhoto -->
+
+        <!-- poshytip -->
+        <link rel="stylesheet" href="js/poshytip-1.1/src/tip-twitter/tip-twitter.css"  />
+        <link rel="stylesheet" href="js/poshytip-1.1/src/tip-yellowsimple/tip-yellowsimple.css"  />
+        <script  src="js/poshytip-1.1/src/jquery.poshytip.min.js"></script>
+        <!-- ENDS poshytip -->
+
+        <!-- GOOGLE FONTS -->
+        <link href='http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:400,300' rel='stylesheet' type='text/css'>
+
+        <!-- Flex Slider -->
+        <link rel="stylesheet" href="css/flexslider2.css" >
+        <script src="js/jquery.flexslider-min.js"></script>
+        <!-- ENDS Flex Slider -->
+
+        <!-- Less framework -->
+        <link rel="stylesheet" media="all" href="css/lessframework.css"/>
+
+        <!-- modernizr -->
+        <script src="js/modernizr.js"></script>
+
+        <!-- SKIN -->
+        <link rel="stylesheet" media="all" href="css/skin.css"/>
+
+
+        <script type="text/javascript">
+            // test auto-ready logic - call corner before DOM is ready
+            $( '#readyTest' ).corner();
+
+            $( function() {
+                $( '#dynCorner' ).click( function() {
+                    $( '#dynamic' ).corner();
+                } );
+                $( '#dynUncorner' ).click( function() {
+                    $( '#dynamic' ).uncorner();
+                } );
+
+                $( 'div.inner' ).wrap( '<div class="outer"></div>' );
+                $( 'p' ).wrap( "<code></code>" );
+
+                $( 'div.demo, div.inner' ).each( function() {
+                    var t = $( 'p', this ).text();
+                    eval( t );
+                } );
+
+                // fixed/fluid tests
+                $( "div.box, div.plain" ).corner();
+                $( "#abs" ).corner( "cc:#08e" );
+
+                $( '.myCorner' ).corner();
+            } );
+        </script>
+
+        <script type="text/javascript">
+
+            /* angoli box sopra */
+            $( '.demo' ).corner( "top 10px" );
+
+            /* angoli box chiusura */
+            $( '.demo2' ).corner( "bottom 10px" );
+
+            $( '.portfolio-thumbs figure' ).corner( "top 10px" );
+
+        </script>
+
+
+    </head>
+
+    <body lang="en">
+
+        <!-- js per bottone FaceBook -->
+
+        <div id="fb-root"></div>
+        <script>( function( d, s, id ) {
+                var js, fjs = d.getElementsByTagName( s )[0];
+                if ( d.getElementById( id ) )
+                    return;
+                js = d.createElement( s );
+                js.id = id;
+                js.src = "//connect.facebook.net/it_IT/all.js#xfbml=1";
+                fjs.parentNode.insertBefore( js, fjs );
+            }( document, 'script', 'facebook-jssdk' ) );</script>
+        <!-- END js per bottone FaceBook -->
+
+
+
+        <p>
+
+            <!-- MAIN -->
+        <div id="main">
+            <div class="wrapper">
+                </p>
+                <div class="wrapper clearfix">
+                    <div style="height:1px;"></div>
+                    <div class="demo" style="height:60px; background-color: #003380;">
+
+                        <p style="color:#e5e3e1; padding-left:10px;"></p>
+                        <a href="index.php"><img  id="apnea" style="margin-top:-22px; margin-left:4px;" src="img/nomelogo.png" alt="Club Apnea" /></a>
+                        <div style="color:#EEE; float:right; text-align:right; font-size:10px; font-family:Arial, Helvetica, sans-serif; padding-right:20px; margin-top:-16px;">
+
+                            <img  id="accademia" src="img/logo_AA_Refl.png"  width="80" alt="apnea accademy" />
+                        </div>
+                    </div>
+
+                    <!--   MENU' PRINCIPALE -->
+                    <div id="combo-holder"></div>
+                    <nav style="height: 30px;">
+                        <ul id="nav" class="sf-menu">
+                            <li><a href="#" style="font-size: 12px; letter-spacing: 2px; padding-left: 10px; padding-right: 10px; color: #39F; ">CORSI</a></li>
+                            <li><a href="chi_siamo.html" style="font-size: 12px; letter-spacing: 2px; padding-left: 10px; padding-right: 10px;">CHI SIAMO</a></li>
+                            <li><a href="#" style="font-size: 12px; letter-spacing: 2px; padding-left: 10px; padding-right: 10px;">ISCRIVITI</a></li>
+                            <li><a href="gallery_base.php" style="font-size: 12px; letter-spacing: 2px; padding-left: 10px; padding-right: 10px;">GALLERY</a></li>
+                            <li><a href="video.php" style="font-size: 12px; letter-spacing: 2px; padding-left: 10px; padding-right: 10px;">VIDEO</a></li>
+                            <li><a href="#" style="font-size: 12px; letter-spacing: 2px; padding-left: 10px; padding-right: 10px;">CONTATTI</a></li>
+                            <li><a href="news.php" style="border-right: 0px solid; font-size: 12px; letter-spacing: 2px; padding-left: 10px; padding-right: 10px;">NEWS</a></li>
+                        </ul>
+                    </nav>
+                </div>
+
+                <!--   MENU' ADULTI -->
+                <div id="combo-holder"></div>
+                <nav>
+                    <ul id="nav" class="sf-menu">
+                        <li ><a href="#" style="color: #39F; padding-left: 10px;">ADULTI:</a></li>
+                        <li><a href="corsi_base.html">APNEA BASE</a></li>
+                        <li><a href="corsi_avanzati.html">APNEA AVANZATO</a></li>
+                        <li><a href="corsi_indoor.html">APNEA INDOOR</a></li>
+                        <li><a href="corsi_rescue.html">APNEA RESCUE</a></li>
+                        <li><a href="#" style="color: #39F;">APNEA CON MONOPINNA</a></li>
+                        <li><a href="corsi_mantenimento.html">MANTENIMENTO</a></li>
+                        <li><a href="corsi_respirazione.html">TECNICHE DI RESPIRAZIONE</a></li>
+                        <li><a href="corsi_stage.html">STAGE</a></li>
+                        <li><a href="corsi_eventi.html" style="border-right: 0px solid">EVENTI</a></li>
+                        <li ><a href="#" style="color: #39F; padding-left: 10px;">BAMBINI:</a></li>
+                        <li><a href="corsi_kad.html">KAD</a></li>
+                    </ul>
+                </nav>
+            </div>
+
+
+
+            <div class="wrapper">
+
+                <!-- slider -->
+                <div class="project-slider" style= "margin-bottom:-30px;">
+                    <div class="flexslider">
+                        <ul class="slides">
+                            <li>
+                                <img src="img/corsi/monopinna/01.jpg" alt="corsi apnea" />
+                            </li>
+
+                        </ul>
+                        <div style="background-color: #000; height:30px;"> </div>
+                    </div>
+                    <!-- ENDS slider -->
+
+                    <div class="home-slider-clearfix "></div>
+
+
+
+
+                </div>
+
+                <!-- ENDS slider holder -->
+
+
+            </div>
+        </div>
+        <!-- ENDS home-block -->
+        <!-- ENDS warper -->
+        <div class="wrapper clearfix">
+
+            <!-- blocco blu sotto -->
+            <div class="demo2" style="height:100%; margin-top:-60px;
+                 background-color: #003380;">
+
+                <div class="project-heading">
+
+                    <div class="portfolio-thumbs clearfix" >
+
+                        <!-- area foto ----------------------------------------------------------- -->
+                        <div style="width:28%; height:100%; float:right; padding-right: 20px; margin-bottom:20px;">
+                            <img id="fotoa" src="img/corsi/monopinna/02.jpg" width="100%" alt="foto"/>
+                        </div>
+
+                        <!-- area testo ----------------------------------------------------------- -->
+
+                        <div id="corsitesto">
+
+                            <p style="font-family:Arial, Helvetica, sans-serif">
+
+
+                                <span style="color:#39F; font-weight: bold;">CORSO BASE</span><br>
+                                <br>
+
+
+                                <span style="color:#39F; font-weight: bold;">CONTENUTI:</span><br>
+                                è studiato per chi vuole avvicinarsi alla monopinna anche senza essere un apneista e imparare i rudimenti per muoversi in apnea come un delfino. Si prefigge di insegnare la tecnica della monopinna partendo dalle basi del  nuoto pinnato, per poi arrivare all’utilizzo dell’attrezzo in modo più specifico sia in superficie che in apnea. Consta di 10 incontri per un totale di 20 ore di lezione (teoria e pratica) tra cui: esercizi di stretching, mobilità articolare, potenziamento addominale e lombare. Tecniche di respirazione e di rilassamento. Esercitazioni a corpo libero, con pinnette e con monopinna. Il corso comprende il manuale “L’immersione in apnea con la monopinna” e il brevetto “Monopinna Base” di Apnea Academy.<br><br>
+
+
+                                <span style="color:#39F; font-weight: bold;">REQUISITI:</span><br>
+                                per iscriversi è necessario avere 14 anni, saper nuotare sufficientemente. Avere un certificato di sana e robusta costituzione.<br><br>
+
+
+                                <span style="color:#39F; font-weight: bold;">ATTREZZATURA:</span><br>
+                                Per la parte in acqua: occhialini, maschera, aeratore, pinnette corte, monopinna. Per le sedute  a secco: abbigliamento comodo (pantaloni, maglietta, tappetino).<br>
+                                L’organizzazione non fornisce l’attrezzatura; ogni allievo dovrà avere la propria. Per info contattare lo staff al 349.6648914 oppure all’email segreteria@clubapnea.org. <br>
+                                Iscrizione - Costi: contattare la segreteria di ClubApnea (cell.: 349 6648914 – email: <a href="mailto:segreteria@clubapnea.org"><span style="color: #fff;">segreteria@clubapnea.org</span></a>)<br><br>
+                                <br><br>
+
+                                <span style="color:#39F; font-weight: bold;">CORSO AVANZATO</span><br>
+                                <br>
+
+
+                                <span style="color:#39F; font-weight: bold;">CONTENUTI:</span><br>
+                                è il perfezionamento della tecnica con monopinna applicata all’apnea dinamica e alla discesa in assetto costante (in mare). Possono accedere gli apneisti certificati con brevetto ‘Monopinna Base’ o ‘Apnea Avanzato’. Il corso consta di una parte in piscina e una in mare. In piscina si svolgono 10 incontri per un totale di 20 ore di lezione (teoria e pratica) in cui si approfondisce la parte tecnica appresa nel corso base (biomeccanica della pinneggiata, scelta della monopinna); si affrontano poi le tecniche di allenamento finalizzato all’agonismo e quelle per praticare la disciplina dell’assetto costante con la monopinna. Le esercitazioni in piscina saranno a corpo libero, con pinnette e con monopinna. La parte in mare prevede 3 uscite  per il conseguimento del brevetto di “monopinna avanzato” e si terranno nelle date comunicate durante il corso. Il corso comprende il brevetto “Monopinna Avanzato” di Apnea Academy. Se l’allievo porta a termine la parte in piscina e non quella in mare, potrà fare quest’ultima entro 1 anno. Decorso l’anno, dovrà ripetere il corso. .<br><br>
+
+
+                                <span style="color:#39F; font-weight: bold;">REQUISITI:</span><br>
+                                per iscriversi è necessario avere 14 anni, avere un certificato di idoneità all’attività sportiva agonistica. Aver conseguito un brevetto ‘Monopinna Base’ o ‘Apnea Avanzato’.<br><br>
+
+
+                                <span style="color:#39F; font-weight: bold;">ATTREZZATURA:</span><br>
+                                Per la parte in acqua: occhialini, maschera, aeratore, pinnette corte, monopinna. Per le sedute  a secco: abbigliamento comodo (pantaloni, maglietta, tappetino). <br>
+                                L’organizzazione non fornisce l’attrezzatura; ogni allievo dovrà avere la propria. Per info contattare lo staff al 349.6648914 oppure all’email segreteria@clubapnea.org. <br>
+                                Iscrizione - Costi: contattare la segreteria di ClubApnea (cell.: 349 6648914 – email: <a href="mailto:segreteria@clubapnea.org"><span style="color: #fff;">segreteria@clubapnea.org</span></a>)<br><br>
+                                <br><br>
+                            </p>
+
+
+                        </div>
+
+                        <!-- area foto 2 ----------------------------------------------------------- -->
+                        <div style="width:28%; height:100%; float:right; padding-right: 20px; margin-bottom:20px;">
+                            <img id="fotob" src="img/corsi/monopinna/03.jpg" width="100%"alt="foto" />
+                        </div>
+
+
+                        <div style="width:100%; height:100%; float:left; margin-left: 14px; margin-right:15px; margin-bottom:15px; color:#FFF; text-align: left; font-size:11px; margin-top:-10px;">
+                            <p><a href="#"><span style="color:#39F; font-weight: bold;">SCARICA IL PDF CON IL PROGRAMMA DEL CORSO COMPLETO</span></a></p>
+
+                            <div style="margin-top:-60px; margin-left:360px;"><a href="#"><img id="pdf" src="img/pdf.png" width="55"/></a></div><BR>
+                            <p style="font-size:9px; margin-top:80px"> CLUB APNEA© 2013</p>
+                        </div>
+
+                        <div class="fb-like" style="margin-right:58px; margin-bottom:30px; margin-top:-30px; float:right;" data-href="https://www.facebook.com/beppe.volpini" data-send="false" data-layout="button_count" data-width="350" data-show-faces="false" data-font="arial" data-colorscheme="dark"></div>
+
+
+
+                    </div>
+                </div>
+
+                <!--  ENDS project content-->
+
+
+            </div>
+        </div>
+
+
+        <div class="clearfix"></div>
+
+        <!-- ENDS MAIN -->
+
+
+    </body>
+
+</html>
