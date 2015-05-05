@@ -104,7 +104,7 @@
 
     </head>
 
-    <body lang="it">
+    <body id="Gallery" lang="it">
 
         <!-- js per bottone FaceBook -->
 
