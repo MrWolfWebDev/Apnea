@@ -58,41 +58,41 @@
 
         <script type="text/javascript">
             // test auto-ready logic - call corner before DOM is ready
-            $( '#readyTest' ).corner();
+            $('#readyTest').corner();
 
-            $( function() {
-                $( '#dynCorner' ).click( function() {
-                    $( '#dynamic' ).corner();
-                } );
-                $( '#dynUncorner' ).click( function() {
-                    $( '#dynamic' ).uncorner();
-                } );
+            $(function () {
+                $('#dynCorner').click(function () {
+                    $('#dynamic').corner();
+                });
+                $('#dynUncorner').click(function () {
+                    $('#dynamic').uncorner();
+                });
 
-                $( 'div.inner' ).wrap( '<div class="outer"></div>' );
-                $( 'p' ).wrap( "<code></code>" );
+                $('div.inner').wrap('<div class="outer"></div>');
+                $('p').wrap("<code></code>");
 
-                $( 'div.demo, div.inner' ).each( function() {
-                    var t = $( 'p', this ).text();
-                    eval( t );
-                } );
+                $('div.demo, div.inner').each(function () {
+                    var t = $('p', this).text();
+                    eval(t);
+                });
 
                 // fixed/fluid tests
-                $( "div.box, div.plain" ).corner();
-                $( "#abs" ).corner( "cc:#08e" );
+                $("div.box, div.plain").corner();
+                $("#abs").corner("cc:#08e");
 
-                $( '.myCorner' ).corner();
-            } );
+                $('.myCorner').corner();
+            });
         </script>
 
         <script type="text/javascript">
 
             /* angoli box sopra */
-            $( '.demo' ).corner( "top 10px" );
+            $('.demo').corner("top 10px");
 
             /* angoli box chiusura */
-            $( '.demo2' ).corner( "bottom 10px" );
+            $('.demo2').corner("bottom 10px");
 
-            $( '.portfolio-thumbs figure' ).corner( "top 10px" );
+            $('.portfolio-thumbs figure').corner("top 10px");
 
         </script>
 
@@ -212,59 +212,65 @@
                                 <a href="corsi_base.html"><img src="img/alien/avatar/01v.jpg" alt="CLUB APNEA" /></a>
                             </figure>
 
-                            <figure>
-                                <figcaption>
-                                    <strong>CHI SIAMO<BR>
-                                        <p style="font-weight:normal; font-size:12px;">Est venture veni tem int, modiatur simus saepuda quia qui, is sa nonsedit que maiorum ressus ium harum et pedipsae ea doluptus.</p></strong>
+                            <a href="chi_siamo.html">
+                                <figure>
+                                    <figcaption>
+                                        <strong>CHI SIAMO<BR>
+                                            <p style="font-weight:normal; font-size:12px;">Est venture veni tem int, modiatur simus saepuda quia qui, is sa nonsedit que maiorum ressus ium harum et pedipsae ea doluptus.</p></strong>
 
-                                    <span>Continua a leggere</span>
-                                </figcaption>
-                                <a href="chi_siamo.html"><img src="img/alien/avatar/02v.jpg" alt="CLUB APNEA" /></a>
-                            </figure>
+                                        <span>Continua a leggere</span>
+                                    </figcaption>
+                                    <a href="chi_siamo.html"><img src="img/alien/avatar/02v.jpg" alt="CLUB APNEA" /></a>
+                                </figure>
+                            </a>
 
-                            <figure>
-                                <figcaption>
-                                    <strong>ISCRIVITI<BR>
-                                        <p style="font-weight:normal; font-size:12px;">Est venture veni tem int, modiatur simus saepuda quia qui, is sa nonsedit que maiorum ressus ium harum et pedipsae ea doluptus.</p></strong>
+                            <a href="iscrizione.php">
+                                <figure>
+                                    <figcaption>
+                                        <strong>ISCRIVITI<BR>
+                                            <p style="font-weight:normal; font-size:12px;">Est venture veni tem int, modiatur simus saepuda quia qui, is sa nonsedit que maiorum ressus ium harum et pedipsae ea doluptus.</p></strong>
 
-                                    <span>Continua a leggere</span>
-                                </figcaption>
-                                <a href="#"><img src="img/alien/avatar/03v.jpg" alt="CLUB APNEA" /></a>
-                            </figure>
-
+                                        <span>Continua a leggere</span>
+                                    </figcaption>
+                                    <a href="iscrizione.php"><img src="img/alien/avatar/03v.jpg" alt="CLUB APNEA" /></a>
+                                </figure>
+                            </a>
 
                             <!-- foto ----------------------------------------------------------- -->
 
+                            <a href="gallery_base.php">
+                                <figure>
+                                    <figcaption>
+                                        <strong>GALLERY<BR>
+                                            <p style="font-weight:normal; font-size:12px;">Est venture veni tem int, modiatur simus saepuda quia qui, is sa nonsedit que maiorum ressus ium harum et pedipsae ea doluptus.</p></strong>
 
-                            <figure>
-                                <figcaption>
-                                    <strong>GALLERY<BR>
-                                        <p style="font-weight:normal; font-size:12px;">Est venture veni tem int, modiatur simus saepuda quia qui, is sa nonsedit que maiorum ressus ium harum et pedipsae ea doluptus.</p></strong>
+                                        <span>Continua a leggere</span>
+                                    </figcaption>
+                                    <a href="gallery_base.php"><img src="img/alien/avatar/01.jpg" alt="Human Alienation 01" /></a>
+                                </figure>
+                            </a>
+                            <a href="chi_siamo.html">
+                                <figure>
+                                    <figcaption>
+                                        <strong>CONTATTI<BR>
+                                            <p style="font-weight:normal; font-size:12px;">Est venture veni tem int, modiatur simus saepuda quia qui, is sa nonsedit que maiorum ressus ium harum et pedipsae ea doluptus.</p></strong>
 
-                                    <span>Continua a leggere</span>
-                                </figcaption>
-                                <a href="gallery_base.php"><img src="img/alien/avatar/01.jpg" alt="Human Alienation 01" /></a>
-                            </figure>
+                                        <span>Continua a leggere</span>
+                                    </figcaption>
+                                    <a href="chi_siamo.html"><img src="img/alien/avatar/02.jpg" alt="Human Alienation 02" /></a>
+                                </figure>
+                            </a>
+                            <a href="news.php">
+                                <figure>
+                                    <figcaption>
+                                        <strong>NEWS<BR>
+                                            <p style="font-weight:normal; font-size:12px;">Est venture veni tem int, modiatur simus saepuda quia qui, is sa nonsedit que maiorum ressus ium harum et pedipsae ea doluptus.</p></strong>
 
-                            <figure>
-                                <figcaption>
-                                    <strong>CONTATTI<BR>
-                                        <p style="font-weight:normal; font-size:12px;">Est venture veni tem int, modiatur simus saepuda quia qui, is sa nonsedit que maiorum ressus ium harum et pedipsae ea doluptus.</p></strong>
-
-                                    <span>Continua a leggere</span>
-                                </figcaption>
-                                <a href="#"><img src="img/alien/avatar/02.jpg" alt="Human Alienation 02" /></a>
-                            </figure>
-
-                            <figure>
-                                <figcaption>
-                                    <strong>NEWS<BR>
-                                        <p style="font-weight:normal; font-size:12px;">Est venture veni tem int, modiatur simus saepuda quia qui, is sa nonsedit que maiorum ressus ium harum et pedipsae ea doluptus.</p></strong>
-
-                                    <span>Continua a leggere</span>
-                                </figcaption>
-                                <a href="news.php"><img src="img/alien/avatar/03.jpg" alt="Human Alienation 03" /></a>
-                            </figure>
+                                        <span>Continua a leggere</span>
+                                    </figcaption>
+                                    <a href="news.php"><img src="img/alien/avatar/03.jpg" alt="Human Alienation 03" /></a>
+                                </figure>
+                            </a>
                         </div>
                     </div>
                     <!--  ENDS project content-->

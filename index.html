@@ -1,313 +1,342 @@
 <!doctype html>
 <html class="no-js">
 
-	<head>
-		<meta charset="utf-8"/>
-		<title>CLUB APNEA - freediving school Milano</title>
-		
-		<link rel="stylesheet" media="all" href="css/style.css"/>
-		<meta name="viewport" content="width=device-width, initial-scale=1"/>
-		
-		<!-- JS -->
-		<script src="js/jquery-1.6.4.min.js"></script>
-		<script src="js/css3-mediaqueries.js"></script>
-		<script src="js/custom.js"></script>
-		<script src="js/tabs.js"></script>
-    	<script src="js/jquery.corner.js"></script>
-		
-		<!-- Tweet -->
-		<link rel="stylesheet" href="css/jquery.tweet.css" media="all"  /> 
-		<script src="js/tweet/jquery.tweet.js" ></script> 
-		<!-- ENDS Tweet -->
-		
-		<!-- superfish -->
-		<link rel="stylesheet" media="screen" href="css/superfish.css" /> 
-		<script  src="js/superfish-1.4.8/js/hoverIntent.js"></script>
-		<script  src="js/superfish-1.4.8/js/superfish.js"></script>
-		<script  src="js/superfish-1.4.8/js/supersubs.js"></script>
-		<!-- ENDS superfish -->
-		
-		<!-- prettyPhoto -->
-		<script  src="js/prettyPhoto/js/jquery.prettyPhoto.js"></script>
-		<link rel="stylesheet" href="js/prettyPhoto/css/prettyPhoto.css"  media="screen" />
-		<!-- ENDS prettyPhoto -->
-		
-		<!-- poshytip -->
-		<link rel="stylesheet" href="js/poshytip-1.1/src/tip-twitter/tip-twitter.css"  />
-		<link rel="stylesheet" href="js/poshytip-1.1/src/tip-yellowsimple/tip-yellowsimple.css"  />
-		<script  src="js/poshytip-1.1/src/jquery.poshytip.min.js"></script>
-		<!-- ENDS poshytip -->
-		
-		<!-- GOOGLE FONTS -->
-		<link href='http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:400,300' rel='stylesheet' type='text/css'>
-		
-		<!-- Flex Slider -->
-		<link rel="stylesheet" href="css/flexslider2.css" >
-		<script src="js/jquery.flexslider-min.js"></script>
-		<!-- ENDS Flex Slider -->
-		
-		<!-- Less framework -->
-		<link rel="stylesheet" media="all" href="css/lessframework.css"/>
-		
-		<!-- modernizr -->
-		<script src="js/modernizr.js"></script>
-		
-		<!-- SKIN -->
-		<link rel="stylesheet" media="all" href="css/skin.css"/>
-        
-        
+    <head>
+        <meta charset="utf-8"/>
+        <title>CLUB APNEA - freediving school Milano</title>
+
+        <link rel="stylesheet" media="all" href="css/style.css"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+        <!-- JS -->
+        <script src="js/jquery-1.6.4.min.js"></script>
+        <script src="js/css3-mediaqueries.js"></script>
+        <script src="js/custom.js"></script>
+        <script src="js/tabs.js"></script>
+        <script src="js/jquery.corner.js"></script>
+
+        <!-- Tweet -->
+        <link rel="stylesheet" href="css/jquery.tweet.css" media="all"  /> 
+        <script src="js/tweet/jquery.tweet.js" ></script> 
+        <!-- ENDS Tweet -->
+
+        <!-- superfish -->
+        <link rel="stylesheet" media="screen" href="css/superfish.css" /> 
+        <script  src="js/superfish-1.4.8/js/hoverIntent.js"></script>
+        <script  src="js/superfish-1.4.8/js/superfish.js"></script>
+        <script  src="js/superfish-1.4.8/js/supersubs.js"></script>
+        <!-- ENDS superfish -->
+
+        <!-- prettyPhoto -->
+        <script  src="js/prettyPhoto/js/jquery.prettyPhoto.js"></script>
+        <link rel="stylesheet" href="js/prettyPhoto/css/prettyPhoto.css"  media="screen" />
+        <!-- ENDS prettyPhoto -->
+
+        <!-- poshytip -->
+        <link rel="stylesheet" href="js/poshytip-1.1/src/tip-twitter/tip-twitter.css"  />
+        <link rel="stylesheet" href="js/poshytip-1.1/src/tip-yellowsimple/tip-yellowsimple.css"  />
+        <script  src="js/poshytip-1.1/src/jquery.poshytip.min.js"></script>
+        <!-- ENDS poshytip -->
+
+        <!-- GOOGLE FONTS -->
+        <link href='http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:400,300' rel='stylesheet' type='text/css'>
+
+        <!-- Flex Slider -->
+        <link rel="stylesheet" href="css/flexslider2.css" >
+        <script src="js/jquery.flexslider-min.js"></script>
+        <!-- ENDS Flex Slider -->
+
+        <!-- Less framework -->
+        <link rel="stylesheet" media="all" href="css/lessframework.css"/>
+
+        <!-- modernizr -->
+        <script src="js/modernizr.js"></script>
+
+        <!-- SKIN -->
+        <link rel="stylesheet" media="all" href="css/skin.css"/>
+
+
         <script type="text/javascript">
-    // test auto-ready logic - call corner before DOM is ready
-    $('#readyTest').corner();
-    
-    $(function(){
-		$('#dynCorner').click(function() {
-			$('#dynamic').corner();
-		});
-		$('#dynUncorner').click(function() {
-			$('#dynamic').uncorner();
-		});
-	
-        $('div.inner').wrap('<div class="outer"></div>');
-        $('p').wrap("<code></code>");
+            // test auto-ready logic - call corner before DOM is ready
+            $('#readyTest').corner();
 
-        $('div.demo, div.inner').each(function() {
-            var t = $('p', this).text();
-            eval(t);
-        });
+            $(function () {
+                $('#dynCorner').click(function () {
+                    $('#dynamic').corner();
+                });
+                $('#dynUncorner').click(function () {
+                    $('#dynamic').uncorner();
+                });
 
-        // fixed/fluid tests
-        $("div.box, div.plain").corner();
-        $("#abs").corner("cc:#08e");
-		
-		$('.myCorner').corner();
-    });
-</script>
+                $('div.inner').wrap('<div class="outer"></div>');
+                $('p').wrap("<code></code>");
 
-<script type="text/javascript">
+                $('div.demo, div.inner').each(function () {
+                    var t = $('p', this).text();
+                    eval(t);
+                });
 
-/* angoli box sopra */
-$('.demo').corner("top 10px");
+                // fixed/fluid tests
+                $("div.box, div.plain").corner();
+                $("#abs").corner("cc:#08e");
 
-/* angoli box chiusura */
-$('.demo2').corner("bottom 10px");
+                $('.myCorner').corner();
+            });
+        </script>
 
-$('.portfolio-thumbs figure').corner("top 10px");		
+        <script type="text/javascript">
 
-</script>
-	
+            /* angoli box sopra */
+            $('.demo').corner("top 10px");
 
-	</head>
-	
-	<body lang="en">
-	
-	
-		<p>
-		  
-		  <!-- MAIN -->
-    <div id="main">
-		  <div class="wrapper">
-    </p>
-		<div class="wrapper clearfix">
-        <div style="height:1px;"></div>
-        <div class="demo" style="height:60px; background-color: #003380;">
-        
-        <p style="color:#e5e3e1; padding-left:10px;"></p>
-        <a href="index.html"><img  id="apnea" style="margin-top:-22px; margin-left:4px;" src="img/nomelogo.png" alt="Club Apnea" /></a>
-         <div style="color:#EEE; float:right; text-align:right; font-size:10px; font-family:Arial, Helvetica, sans-serif; padding-right:20px; margin-top:-16px;">
-         
-         <img  id="accademia" src="img/logo_AA_Refl.png"  width="80" alt="apnea accademy" />
-         </div>
-        </div>	
-        
-        
-        <!--   MENU' PRINCIPALE -->
-      <div id="combo-holder"></div>
-        <nav style="height: 40px;">
-        <ul id="nav" class="sf-menu">
-				<li><a href="corsi_base.html" style="font-size: 12px; letter-spacing: 2px; padding-left: 10px; padding-right: 10px;">CORSI</a></li>
-				<li><a href="chi_siamo.html" style="font-size: 12px; letter-spacing: 2px; padding-left: 10px; padding-right: 10px;">CHI SIAMO / CONTATTI</a></li>
-                <li><a href="#" style="font-size: 12px; letter-spacing: 2px; padding-left: 10px; padding-right: 10px;">ISCRIVITI</a></li>
-				<li><a href="gallery_base.php" style="font-size: 12px; letter-spacing: 2px; padding-left: 10px; padding-right: 10px;">GALLERY</a></li>	                    	
-                <li><a href="video.php" style="font-size: 12px; letter-spacing: 2px; padding-left: 10px; padding-right: 10px;">VIDEO</a></li>	                    	
-                <li><a href="news.php" style="border-right: 0px solid; font-size: 12px; letter-spacing: 2px; padding-left: 10px; padding-right: 10px;">NEWS</a></li>
-		</ul>
-		</nav>
-      </div>
-             
+            /* angoli box chiusura */
+            $('.demo2').corner("bottom 10px");
 
-               
-			<div class="wrapper">
+            $('.portfolio-thumbs figure').corner("top 10px");
 
-					
-					<!-- slider -->
-					<div class="project-slider">
-				        <div class="flexslider">
-						  <ul class="slides">
-                           <li>
-						      <img src="img/slide/01_home.jpg" alt="alt text" />
-						    </li>
-                            
-                            <li>
-						      <img src="img/slide/02_home.jpg" alt="alt text" />
-						    </li>
-                            
-                            <li>
-						      <img src="img/slide/03_home.jpg" alt="alt text" />
-						    </li>
-                            
-                            <li>
-						      <img src="img/slide/04_home.jpg" alt="alt text" />
-						    </li>
-                            
-                            <li>
-						      <img src="img/slide/05_home.jpg" alt="alt text" />
-						    </li>
-                            
-                            <li>
-						      <img src="img/slide/06_home.jpg" alt="alt text" />
-						    </li>
-                            
-                            <li>
-						      <img src="img/slide/07_home.jpg" alt="alt text" />
-						    </li>
-                            
-                            <li>
-						      <img src="img/slide/08_home.jpg" alt="alt text" />
-						    </li>
-                            
-                            <li>
-						      <img src="img/slide/09_home.jpg" alt="alt text" />
-						    </li>
-                            
-                            <li>
-						      <img src="img/slide/10_home.jpg" alt="alt text" />
-						    </li>
-                            
-                            <li>
-						      <img src="img/slide/11_home.jpg" alt="alt text" />
-						    </li>
-                            
-                            <li>
-						      <img src="img/slide/12_home.jpg" alt="alt text" />
-						    </li>
-                            
-                            <li>
-						      <img src="img/slide/13_home.jpg" alt="alt text" />
-						    </li>
-                            
-                            <li>
-						      <img src="img/slide/14_home.jpg" alt="alt text" />
-						    </li>
-                            
-                            <li>
-						      <img src="img/slide/15_home.jpg" alt="alt text" />
-						    </li>
-                            
-                            <li>
-						      <img src="img/slide/16_home.jpg" alt="alt text" />
-						    </li>
-                            
-                            <li>
-						      <img src="img/slide/17_home.jpg" alt="alt text" />
-						    </li>
-                            
-                            <li>
-						      <img src="img/slide/18_home.jpg" alt="alt text" />
-						    </li>
-                            
-                            <li>
-						      <img src="img/slide/19_home.jpg" alt="alt text" />
-						    </li>
-                            
-                            <li>
-						      <img src="img/slide/20_home.jpg" alt="alt text" />
-						    </li>
+        </script>
+
+
+    </head>
+
+    <body lang="en">
+
+
+        <p>
+
+            <!-- MAIN -->
+        <div id="main">
+            <div class="wrapper">
+                </p>
+                <div class="wrapper clearfix">
+                    <div style="height:1px;"></div>
+                    <div class="demo" style="height:60px; background-color: #003380;">
+
+                        <p style="color:#e5e3e1; padding-left:10px;"></p>
+                        <a href="index.html"><img  id="apnea" style="margin-top:-22px; margin-left:4px;" src="img/nomelogo.png" alt="Club Apnea" /></a>
+                        <div style="color:#EEE; float:right; text-align:right; font-size:10px; font-family:Arial, Helvetica, sans-serif; padding-right:20px; margin-top:-16px;">
+
+                            <img  id="accademia" src="img/logo_AA_Refl.png"  width="80" alt="apnea accademy" />
+                        </div>
+                    </div>	
+
+
+                    <!--   MENU' PRINCIPALE -->
+                    <div id="combo-holder"></div>
+                    <nav style="height: 40px;">
+                        <ul id="nav" class="sf-menu">
+                            <li><a href="corsi_base.html" style="font-size: 12px; letter-spacing: 2px; padding-left: 10px; padding-right: 10px;">CORSI</a></li>
+                            <li><a href="chi_siamo.html" style="font-size: 12px; letter-spacing: 2px; padding-left: 10px; padding-right: 10px;">CHI SIAMO / CONTATTI</a></li>
+                            <li><a href="#" style="font-size: 12px; letter-spacing: 2px; padding-left: 10px; padding-right: 10px;">ISCRIVITI</a></li>
+                            <li><a href="gallery_base.php" style="font-size: 12px; letter-spacing: 2px; padding-left: 10px; padding-right: 10px;">GALLERY</a></li>	                    	
+                            <li><a href="video.php" style="font-size: 12px; letter-spacing: 2px; padding-left: 10px; padding-right: 10px;">VIDEO</a></li>	                    	
+                            <li><a href="news.php" style="border-right: 0px solid; font-size: 12px; letter-spacing: 2px; padding-left: 10px; padding-right: 10px;">NEWS</a></li>
+                        </ul>
+                    </nav>
+                </div>
+
+
+
+                <div class="wrapper">
+
+
+                    <!-- slider -->
+                    <div class="project-slider">
+                        <div class="flexslider">
+                            <ul class="slides">
+                                <li>
+                                    <img src="img/slide/01_home.jpg" alt="alt text" />
+                                </li>
+
+                                <li>
+                                    <img src="img/slide/02_home.jpg" alt="alt text" />
+                                </li>
+
+                                <li>
+                                    <img src="img/slide/03_home.jpg" alt="alt text" />
+                                </li>
+
+                                <li>
+                                    <img src="img/slide/04_home.jpg" alt="alt text" />
+                                </li>
+
+                                <li>
+                                    <img src="img/slide/05_home.jpg" alt="alt text" />
+                                </li>
+
+                                <li>
+                                    <img src="img/slide/06_home.jpg" alt="alt text" />
+                                </li>
+
+                                <li>
+                                    <img src="img/slide/07_home.jpg" alt="alt text" />
+                                </li>
+
+                                <li>
+                                    <img src="img/slide/08_home.jpg" alt="alt text" />
+                                </li>
+
+                                <li>
+                                    <img src="img/slide/09_home.jpg" alt="alt text" />
+                                </li>
+
+                                <li>
+                                    <img src="img/slide/10_home.jpg" alt="alt text" />
+                                </li>
+
+                                <li>
+                                    <img src="img/slide/11_home.jpg" alt="alt text" />
+                                </li>
+
+                                <li>
+                                    <img src="img/slide/12_home.jpg" alt="alt text" />
+                                </li>
+
+                                <li>
+                                    <img src="img/slide/13_home.jpg" alt="alt text" />
+                                </li>
+
+                                <li>
+                                    <img src="img/slide/14_home.jpg" alt="alt text" />
+                                </li>
+
+                                <li>
+                                    <img src="img/slide/15_home.jpg" alt="alt text" />
+                                </li>
+
+                                <li>
+                                    <img src="img/slide/16_home.jpg" alt="alt text" />
+                                </li>
+
+                                <li>
+                                    <img src="img/slide/17_home.jpg" alt="alt text" />
+                                </li>
+
+                                <li>
+                                    <img src="img/slide/18_home.jpg" alt="alt text" />
+                                </li>
+
+                                <li>
+                                    <img src="img/slide/19_home.jpg" alt="alt text" />
+                                </li>
+
+                                <li>
+                                    <img src="img/slide/20_home.jpg" alt="alt text" />
+                                </li>
                             </ul>
-                            </div>
-                    <!-- ENDS slider -->
-		        	
-   	<div class="home-slider-clearfix "></div>
-		        	
-		        	
-		        	
-		        	
-				</div>
-               
-				<!-- ENDS slider holder -->
-               	
+                        </div>
+                        <!-- ENDS slider -->
 
-	        	</div>
-	        	</div>
-	        	<!-- ENDS home-block -->
-               <!-- ENDS warper -->
-               <div class="wrapper clearfix">
-               
-               <!-- blocco blu sotto -->
-               <div class="demo2" style="height:100%; margin-top:-30px; background-color: #003380;">
-               
-<div class="project-heading">
-                    				<!-- thumbs -->
-				<div class="portfolio-thumbs clearfix" >
-                
-   <!-- video ----------------------------------------------------------- -->
+                        <div class="home-slider-clearfix "></div>
 
-   <figure>
-     <figcaption></figcaption>
-     <a href="corsi_base.html"><img src="img/alien/avatar/01v.jpg" alt="CLUB APNEA" /></a> </figure>
-   <figure>
-   				<figcaption>
-        					  <strong>
-				  <p style="font-weight:normal; font-size:12px;">&nbsp;</p></strong></figcaption>
-		        		<a href="#"><img src="img/alien/avatar/02v.jpg" alt="CLUB APNEA" /></a>
-        		  </figure>
-                    
-                    <figure>
-	        				<figcaption>
-        					  <strong>
-        					  <p style="font-weight:normal; font-size:12px;">&nbsp;</p></strong></figcaption>
-		        		<a href="#"><img src="img/alien/avatar/03v.jpg" alt="CLUB APNEA" /></a>
-	        		</figure>
-    
-                   
-  <!-- foto ----------------------------------------------------------- -->                  
-                    
-                    
-                    <figure>
-	        				<figcaption>
-                            <strong>
-                            <p style="font-weight:normal; font-size:12px;">&nbsp;</p></strong></figcaption>
-		        		<a href="#"><img src="img/alien/avatar/01.jpg" alt="Human Alienation 01" /></a>
-	        		</figure>
-	        		
-	        		<figure>
-	        				<figcaption>
-                            <strong>
-                            <p style="font-weight:normal; font-size:12px;">&nbsp;</p></strong></figcaption>
-		        		<a href="#"><img src="img/alien/avatar/02.jpg" alt="Human Alienation 02" /></a>
-	        		</figure>
-	        		
-	        		<figure>
-	        				<figcaption>
-                            <strong>
-                            <p style="font-weight:normal; font-size:12px;">&nbsp;</p></strong></figcaption>
-		        		<a href="#"><img src="img/alien/avatar/03.jpg" alt="Human Alienation 03" /></a>
-                  </figure>	
-			</div>
-                    	</div>        	
-	        	<!--  ENDS project content-->
 
-	        	
-			</div>  
-       
-			</div>
-            
-            
+
+
+                    </div>
+
+                    <!-- ENDS slider holder -->
+
+
+                </div>
+            </div>
+            <!-- ENDS home-block -->
+            <!-- ENDS warper -->
+            <div class="wrapper clearfix">
+
+                <!-- blocco blu sotto -->
+                <div class="demo2" style="height:100%; margin-top:-30px; background-color: #003380;">
+
+                    <div class="project-heading">
+                        <!-- thumbs -->
+                        <div class="portfolio-thumbs clearfix" >
+
+                            <!-- video ----------------------------------------------------------- -->
+
+                            <figure>
+                                <figcaption>
+                                    <strong>CORSI<BR>
+                                        <p style="font-weight:normal; font-size:12px;">Est venture veni tem int, modiatur simus saepuda quia qui, is sa nonsedit que maiorum ressus ium harum et pedipsae ea doluptus.</p></strong>
+
+                                    <span>Continua a leggere</span>
+                                </figcaption>
+
+                                <a href="corsi_base.html"><img src="img/alien/avatar/01v.jpg" alt="CLUB APNEA" /></a>
+                            </figure>
+
+                            <a href="chi_siamo.html">
+                                <figure>
+                                    <figcaption>
+                                        <strong>CHI SIAMO<BR>
+                                            <p style="font-weight:normal; font-size:12px;">Est venture veni tem int, modiatur simus saepuda quia qui, is sa nonsedit que maiorum ressus ium harum et pedipsae ea doluptus.</p></strong>
+
+                                        <span>Continua a leggere</span>
+                                    </figcaption>
+                                    <a href="chi_siamo.html"><img src="img/alien/avatar/02v.jpg" alt="CLUB APNEA" /></a>
+                                </figure>
+                            </a>
+
+                            <a href="iscrizione.php">
+                                <figure>
+                                    <figcaption>
+                                        <strong>ISCRIVITI<BR>
+                                            <p style="font-weight:normal; font-size:12px;">Est venture veni tem int, modiatur simus saepuda quia qui, is sa nonsedit que maiorum ressus ium harum et pedipsae ea doluptus.</p></strong>
+
+                                        <span>Continua a leggere</span>
+                                    </figcaption>
+                                    <a href="iscrizione.php"><img src="img/alien/avatar/03v.jpg" alt="CLUB APNEA" /></a>
+                                </figure>
+                            </a>
+
+                            <!-- foto ----------------------------------------------------------- -->
+
+                            <a href="gallery_base.php">
+                                <figure>
+                                    <figcaption>
+                                        <strong>GALLERY<BR>
+                                            <p style="font-weight:normal; font-size:12px;">Est venture veni tem int, modiatur simus saepuda quia qui, is sa nonsedit que maiorum ressus ium harum et pedipsae ea doluptus.</p></strong>
+
+                                        <span>Continua a leggere</span>
+                                    </figcaption>
+                                    <a href="gallery_base.php"><img src="img/alien/avatar/01.jpg" alt="Human Alienation 01" /></a>
+                                </figure>
+                            </a>
+                            <a href="chi_siamo.html">
+                                <figure>
+                                    <figcaption>
+                                        <strong>CONTATTI<BR>
+                                            <p style="font-weight:normal; font-size:12px;">Est venture veni tem int, modiatur simus saepuda quia qui, is sa nonsedit que maiorum ressus ium harum et pedipsae ea doluptus.</p></strong>
+
+                                        <span>Continua a leggere</span>
+                                    </figcaption>
+                                    <a href="chi_siamo.html"><img src="img/alien/avatar/02.jpg" alt="Human Alienation 02" /></a>
+                                </figure>
+                            </a>
+                            <a href="news.php">
+                                <figure>
+                                    <figcaption>
+                                        <strong>NEWS<BR>
+                                            <p style="font-weight:normal; font-size:12px;">Est venture veni tem int, modiatur simus saepuda quia qui, is sa nonsedit que maiorum ressus ium harum et pedipsae ea doluptus.</p></strong>
+
+                                        <span>Continua a leggere</span>
+                                    </figcaption>
+                                    <a href="news.php"><img src="img/alien/avatar/03.jpg" alt="Human Alienation 03" /></a>
+                                </figure>
+                            </a>
+                        </div>
+                    </div>        	
+                    <!--  ENDS project content-->
+
+
+                </div>  
+
+            </div>
+
+
             <div class="clearfix"></div>
 
-        <!-- ENDS MAIN -->
-       
-					
-	</body>
+            <!-- ENDS MAIN -->
+
+
+    </body>
 
 </html>
