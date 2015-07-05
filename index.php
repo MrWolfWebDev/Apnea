@@ -209,7 +209,7 @@
                                     <span>Continua a leggere</span>
                                 </figcaption>
 
-                                <a href="corsi_base.html"><img src="img/alien/avatar/01v.jpg" alt="CLUB APNEA" /></a>
+                                <a href="corsi_base.php"><img src="img/alien/avatar/01v.jpg" alt="CLUB APNEA" /></a>
                             </figure>
 
                             <a href="chi_siamo.html">

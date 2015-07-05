@@ -131,7 +131,7 @@ $('.portfolio-thumbs figure').corner("top 10px");
         <div class="demo" style="height:60px; background-color: #003380;">
         
          <p style="color:#e5e3e1; padding-left:10px;"></p>
-        <a href="index.html"><img  id="apnea" style="margin-top:-22px; margin-left:4px;" src="img/nomelogo.png" alt="Club Apnea" /></a>
+        <a href="/"><img  id="apnea" style="margin-top:-22px; margin-left:4px;" src="img/nomelogo.png" alt="Club Apnea" /></a>
          <div style="color:#EEE; float:right; text-align:right; font-size:10px; font-family:Arial, Helvetica, sans-serif; padding-right:20px; margin-top:-16px;">
          
          <img  id="accademia" src="img/logo_AA_Refl.png"  width="80" alt="apnea accademy" />
