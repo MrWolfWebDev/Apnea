@@ -8,20 +8,26 @@ require('pdf/mpdf.php');
 
 $mpdf = new mPDF();
 
-$name = $_POST( 'nome' );
-$cognome = $_POST( 'cognome' );
-$corso = $_POST( 'corso' );
-$luogo = $_POST( 'luogo' );
-$periodo = $_POST( 'periodo' );
+var_dump($_POST);
+$nome = $_POST['nome'];
+echo $nome;
+$cognome = $_POST['cognome'];
+echo $cognome;
+$corso = $_POST['corso'];
+echo $corso;
+$luogo = $_POST['luogo'];
+echo $luogo;
+$periodo = $_POST['periodo'];
+echo $periodo;
 
 $iscrizioniDB = new Table( "iscrizioni" );
 
 $iscrizioniDB->insert( array(
-    "Nome" => $_POST( 'nome' ),
-    "Cognome" => $_POST( 'cognome' ),
-    "Corso" => $_POST( 'corso' ),
-    "Luogo" => $_POST( 'luogo' ),
-    "Periodo" => $_POST( 'periodo' ),
+    "Nome" => $nome,
+    "Cognome" => $cognome,
+    "Corso" => $corso,
+    "Luogo" => $luogo,
+    "Periodo" => $periodo,
     "DataIns" => date( "Y-m-d" ),
         )
 );
