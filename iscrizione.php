@@ -144,9 +144,9 @@
                     <div id="combo-holder"></div>
                     <nav style="height: 30px;">
                         <ul id="nav" class="sf-menu">
-                            <li><a href="corsi_base.html" style="font-size: 12px; letter-spacing: 2px; padding-left: 10px; padding-right: 10px; ">CORSI</a></li>
-                            <li><a href="#" style="font-size: 12px; letter-spacing: 2px; padding-left: 10px; padding-right: 10px;">CHI SIAMO / CONTATTI</a></li>
-                            <li><a href="#" style="font-size: 12px; letter-spacing: 2px; padding-left: 10px; padding-right: 10px;">ISCRIVITI</a></li>
+                            <li><a href="corsi_base.php" style="font-size: 12px; letter-spacing: 2px; padding-left: 10px; padding-right: 10px; ">CORSI</a></li>
+                            <li><a href="chi_siamo.html" style="font-size: 12px; letter-spacing: 2px; padding-left: 10px; padding-right: 10px;">CHI SIAMO / CONTATTI</a></li>
+                            <li><a href="iscrizione.php" style="font-size: 12px; letter-spacing: 2px; padding-left: 10px; padding-right: 10px;">ISCRIVITI</a></li>
                             <li><a href="gallery_base.php" style="font-size: 12px; letter-spacing: 2px; padding-left: 10px; padding-right: 10px;">GALLERY</a></li>	                    	
                             <li><a href="video.php" style="font-size: 12px; letter-spacing: 2px; padding-left: 10px; padding-right: 10px;">VIDEO</a></li>
                             <li><a href="news.php" style="border-right: 0px solid; font-size: 12px; letter-spacing: 2px; padding-left: 10px; padding-right: 10px;">NEWS</a></li>
