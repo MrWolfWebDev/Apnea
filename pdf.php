@@ -32,12 +32,12 @@ $iscrizioniDB->insert( array(
         )
 );
 
-$mpdf->WriteHTML( "<h2 style='text-align:center;'>ISCRIZIONE CORSO CLUBAPNEA ASD" );
-$mpdf->WriteHTML( "<p>Io sottoscritto $cognome $nome </p>" );
-$mpdf->WriteHTML( "<p>chiedo di frequentare il corso di $corso</p>" );
-$mpdf->WriteHTML( "<p>che si terrà presso $luogo</p>" );
-$mpdf->WriteHTML( "<p>nel periodo dal/al $periodo</p>" );
-
+$mpdf->WriteHTML( "<div style='width:100%;text-align:center;'><img src='img/logo.png' style='width:150px;'/></div>" );
+$mpdf->WriteHTML( "<h2 style='text-align:center; margin-top:50px; margin-bottom:50px;'>ISCRIZIONE CORSO CLUBAPNEA ASD</h2>" );
+$mpdf->WriteHTML( "<p style='width:80%; margin-left: 10%;'>Io sottoscritto $cognome $nome <br/><br/> chiedo di frequentare il corso di $corso <br/><br/> che si terrà presso $luogo<br/><br/> nel periodo dal/al $periodo</p>" );
+$mpdf->WriteHTML( "<p style='margin-top:200px; width:80%; margin-left: 10%; text-align: left;'>Data __________________<span style='margin-left:20%;'>Firma ___________________</span></p>");
+$mpdf->WriteHTML( "<p style='margin-top:50px; width:80%; margin-left: 10%;'>SCADENZA CERTIFICATO MEDICO<br/>(da compilare a cura della segreteria)______________________</p>");
+$mpdf->WriteHTML( "<p style='width:100%; bottom:0px; text-align:center;margin-top: 100px;'>CLUBAPNEA – VIA LANFRANCO DELLA PILA 27 - 20162 MILANO – P IVA 05896240966 </p>" );
 $mpdf->AddPage();
 
 $mpdf->Output( "Iscrizione_$nome_$cognome.pdf", 'D' );
