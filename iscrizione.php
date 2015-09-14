@@ -133,7 +133,7 @@
                     <div class="demo" style="height:60px; background-color: #003380;">
 
                         <p style="color:#e5e3e1; padding-left:10px;"></p>
-                        <a href="index.php"><img  id="apnea" style="margin-top:-22px; margin-left:4px;" src="img/nomelogo.png" alt="Club Apnea" /></a>
+                        <a href="/"><img  id="apnea" style="margin-top:-22px; margin-left:4px;" src="img/nomelogo.png" alt="Club Apnea" /></a>
                         <div style="color:#EEE; float:right; text-align:right; font-size:10px; font-family:Arial, Helvetica, sans-serif; padding-right:20px; margin-top:-16px;">
 
                             <img  id="accademia" src="img/logo_AA_Refl.png"  width="80" alt="apnea accademy" />
@@ -144,7 +144,7 @@
                     <div id="combo-holder"></div>
                     <nav style="height: 30px;">
                         <ul id="nav" class="sf-menu">
-                            <li><a href="corsi_base.php" style="font-size: 12px; letter-spacing: 2px; padding-left: 10px; padding-right: 10px; ">CORSI</a></li>
+                            <li><a href="corsi_base.html" style="font-size: 12px; letter-spacing: 2px; padding-left: 10px; padding-right: 10px; ">CORSI</a></li>
                             <li><a href="chi_siamo.html" style="font-size: 12px; letter-spacing: 2px; padding-left: 10px; padding-right: 10px;">CHI SIAMO / CONTATTI</a></li>
                             <li><a href="iscrizione.php" style="font-size: 12px; letter-spacing: 2px; padding-left: 10px; padding-right: 10px;">ISCRIVITI</a></li>
                             <li><a href="gallery_base.php" style="font-size: 12px; letter-spacing: 2px; padding-left: 10px; padding-right: 10px;">GALLERY</a></li>	                    	
@@ -172,7 +172,7 @@
                     <div class="portfolio-thumbs clearfix" >
 
 
-                        <!-- area testo ----------------------------------------------------------- --> 
+                        <!-- area testo --> 
 
 
                         <div id="corsitesto">
@@ -182,11 +182,65 @@
 
                             <p>tel.  349 6648914 – email: <a href="mailto:segreteria@clubapnea.org">segreteria@clubapnea.org</a></p>
 
+														<p> 
+Benvenuto, benvenuta! 
+<br/>
+Per partecipare alle nostre attività: 
+
+<br/>
+1) inserisci i dati richiesti qui sotto per l’adesione a  ClubApnea ASD (siamo un’associazione sportiva, per 
+
+fare uno dei nostri corsi è necessario associarsi) e per l’iscrizione al corso; 
+
+<br/>
+2) fai/prenota il CERTIFICATO MEDICO: per tutti i corsi (tranne per quello di respirazione per cui occorre il 
+
+certificato medico di buona salute) serve il certificato SPORTIVO AGONISTICO. Può essere rilasciato solo dal 
+
+medico sportivo. Quando prenoti la visita per il certificato sportivo agonistico, devi specificare che è per 
+
+l’attività di apnea e che va bene in carta libera. Il certificato sportivo agonistico infatti può essere rilasciato 
+
+anche su carta intestata della Regione Lombardia. A noi non serve su carta intestata e per ottenerlo è 
+
+necessaria una richiesta dell’associazione, non necessaria invece per averlo su carta libera (in ogni caso, se 
+
+tu volessi farlo su carta intestata, possiamo farti avere tale richiesta). Ricorda che è obbligatorio avere il 
+
+certificato medico non al momento dell’iscrizione ma al momento dell’inizio del corso, per cui puoi iscriverti 
+
+anche prima di averlo, ma è necessario organizzarsi per consegnarlo alla prima lezione. 
+
+<br/>
+3) una volta inseriti i dati richiesti, si genera una scheda di iscrizione (in pdf), stampala e firmala in originale, 
+
+poi procedi a PERFEZIONARE LA TUA ISCRIZIONE contattando la segreteria di ClubApnea all’email 
+
+<a href="mailto:segreteria@clubapnea.org">segreteria@clubapnea.org</a> o al telefono 3496648914: ti indicheremo le MODALITÀ DI PAGAMENTO della 
+
+quota di adesione e ti daremo indicazioni per CONSEGNARE la scheda di iscrizione e il certificato medico 
+
+(anch’esso in originale). 
+<br/>
+Per ogni informazione, dubbio o curiosità, contattaci al 3496648194. 
+<br/>
+A presto 
+<br/>
+ClubApnea
+ </p>
+
+
                             <form action="pdf.php" method="post">
-                                <p>Io sottoscritto <input type="text" placeholder="Cognome" name="cognome">  <input type="text" placeholder="Nome" name="nome"> </p>
+                                <p>Io sottoscritto <input type="text" placeholder="Cognome" name="cognome">  <input type="text" placeholder="Nome" name="nome">,</p>
+																<p>(Codice fiscale: <input type="text" name="codicefiscale"/>)</p>
+																<p>nato a <input type="text" placeholder="città" name="cittanascita">il <input type="text" placeholder="data di nascita" name="datanascita">,</p>
+																<p>residente in <input type="text" placeholder="Città" name="cittaresidenza">, <input type="text" placeholder="CAP" name="capresidenza"/>,</p>
+																<p>via/piazza <input type="text" name="viaresidenza"/></p>
+																<p><input type="text" placeholder="email" name="email"><input type="text" placeholder="cellulare" name="cellulare">
                                 <p>chiedo di frequentare il corso di <input type="text" placeholder="Nome Corso" name="corso"></p>
                                 <p>che si terrà presso <input type="text" placeholder="Luogo" name="luogo"></p>
                                 <p>nel periodo dal/al <input type="text" placeholder="Periodo" name="periodo"></p>
+																<p>per l'anno sportivo <input type="text" name="annosportivo"></p>
                                 <input type="submit" value="Invia Richiesta">
                             </form>
                         </div>

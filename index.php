@@ -113,7 +113,7 @@
                     <div class="demo" style="height:60px; background-color: #003380;">
 
                         <p style="color:#e5e3e1; padding-left:10px;"></p>
-                        <a href="index.php"><img  id="apnea" style="margin-top:-22px; margin-left:4px;" src="img/nomelogo.png" alt="Club Apnea" /></a>
+                        <a href="/"><img  id="apnea" style="margin-top:-22px; margin-left:4px;" src="img/nomelogo.png" alt="Club Apnea" /></a>
                         <div style="color:#EEE; float:right; text-align:right; font-size:10px; font-family:Arial, Helvetica, sans-serif; padding-right:20px; margin-top:-16px;">
 
                             <img  id="accademia" src="img/logo_AA_Refl.png"  width="80" alt="apnea accademy" />
@@ -252,12 +252,12 @@
                             <a href="chi_siamo.html">
                                 <figure>
                                     <figcaption>
-                                        <strong>CONTATTI<BR>
+                                        <strong>VIDEO<BR>
                                             <p style="font-weight:normal; font-size:12px;">Est venture veni tem int, modiatur simus saepuda quia qui, is sa nonsedit que maiorum ressus ium harum et pedipsae ea doluptus.</p></strong>
 
                                         <span>Continua a leggere</span>
                                     </figcaption>
-                                    <a href="chi_siamo.html"><img src="img/alien/avatar/02.jpg" alt="Human Alienation 02" /></a>
+                                    <a href="video.php"><img src="img/alien/avatar/02.jpg" alt="Human Alienation 02" /></a>
                                 </figure>
                             </a>
                             <a href="news.php">

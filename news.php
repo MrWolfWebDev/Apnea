@@ -169,7 +169,7 @@
                         <!-- area testo -->
 
 
-                        <div style="width:66%; height:100%; float:left; margin-left: 14px; margin-right:15px; margin-bottom:15px; color:#FFF; text-align:justify; font-size:11px; line-height:15px;">
+                        <div style="height:100%; float:left; margin-left: 14px; margin-right:15px; margin-bottom:15px; color:#FFF; text-align:justify; font-size:11px; line-height:15px;">
                             <?php
                             require_once 'lib/Twig/Autoloader.php';
                             Twig_Autoloader::register();
@@ -198,11 +198,6 @@
 
 
 
-
-                        <!-- area foto -->
-                        <div style="width:28%; height:100%; float:right; padding-right: 20px; margin-bottom:20px;">
-                            <img src="img/corsi/respirazione/02.jpg" style="width: 100%" alt="foto"/>
-                        </div>
 
                         <div style="width:100%; height:100%; float:left; margin-left: 14px; margin-right:15px; margin-bottom:15px; color:#FFF; text-align: left; font-size:11px; margin-top:-10px;">
 
